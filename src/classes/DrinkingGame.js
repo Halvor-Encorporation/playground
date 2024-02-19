@@ -92,12 +92,27 @@ function replaceNumberRangesWithRandomInts(question) {
     return replacedQuestion;
   }
 
-class DrinkGame {
+  class DrinkGame {
     constructor(players) {
         this.players = shuffleArray(players);
         this.questions = shuffleArray(drinkingGameQuestions);
-        this.player_index = 0
-        this.question_index = 0
+        this.player_index = 0;
+        this.question_index = 0;
+        this.playerAssignments = [];
+        this.assignPlayersToQuestions();
+    }
+
+    assignPlayersToQuestions() {
+        for (let i = 0; i < this.questions.length; i++) {
+            const question = this.questions[i];
+            const { playerCount } = countPlaceholdersAndRanges(question);
+            const assignedPlayers = [];
+            for (let j = 0; j < playerCount; j++) {
+                assignedPlayers.push(this.players[(this.player_index + j) % this.players.length]);
+            }
+            this.playerAssignments.push(assignedPlayers);
+            this.player_index += playerCount;
+        }
     }
 
     nextQuestion() {
@@ -106,8 +121,8 @@ class DrinkGame {
         }
         let question = this.questions[this.question_index];
         let { playerCount, rangeCount } = countPlaceholdersAndRanges(question);
-        question = replacePlaceholders(question, this.players, this.player_index,playerCount);
-        this.player_index+= playerCount;
+        const assignedPlayers = this.playerAssignments[this.question_index];
+        question = replacePlaceholders(question, assignedPlayers, 0, playerCount);
 
         if (rangeCount > 0) {
             question = replaceNumberRangesWithRandomInts(question);
@@ -115,11 +130,6 @@ class DrinkGame {
 
         this.question_index++;
 
-        if (this.player_index >= this.players.length) {
-            this.player_index = 0;
-            this.players = shuffleArray(this.players);
-        }
-        
         return question;
     }
 
@@ -128,27 +138,19 @@ class DrinkGame {
             this.question_index--;
             let question = this.questions[this.question_index - 1];
             let { playerCount, rangeCount } = countPlaceholdersAndRanges(question);
-            question = replacePlaceholders(question, this.players, this.player_index - playerCount, playerCount);
-            this.player_index -= playerCount;
-
+            const assignedPlayers = this.playerAssignments[this.question_index - 1];
+            question = replacePlaceholders(question, assignedPlayers, 0, playerCount);
+    
             if (rangeCount > 0) {
                 question = replaceNumberRangesWithRandomInts(question);
             }
-            if (this.player_index < 0) {
-                this.player_index = this.players.length - 1;
-                this.players = shuffleArray(this.players);
-            }
-
+    
             return question;
         }
-
-        return this.questions[0];
-        
-    }
     
-
-
+        return this.questions[this.question_index - 1];
+    }
 }
+
     
 export default DrinkGame;
-
