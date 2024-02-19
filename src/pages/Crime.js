@@ -47,6 +47,13 @@ const Crime = () => {
     }
   }
 
+  function previousQuestion() {
+    if (game) {
+      const previous = game.previousQuestion();
+      setGameState(previous);
+    }
+  }
+
   useEffect(() => {
     if (game) {
       newQuestion();
@@ -59,7 +66,11 @@ const Crime = () => {
     {gameStarted ? (
       <>
       <p>{gameState}</p>
-      <Button variant="contained" size="large" onClick={newQuestion}>Neste</Button>
+      <div className="buttonContainer">
+        <Button variant="contained" size="large" onClick={previousQuestion}>Forrige</Button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Button variant="contained" size="large" onClick={newQuestion}>Neste</Button>
+      </div>
       </>
     ) : (
       <>

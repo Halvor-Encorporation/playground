@@ -97,11 +97,13 @@ class DrinkGame {
         this.players = shuffleArray(players);
         this.questions = shuffleArray(drinkingGameQuestions);
         this.player_index = 0
-        this.question_index = 0
+        this.question_index = -1
     }
 
     nextQuestion() {
-        this.question_index++;
+        if (this.question_index + 1 < this.questions.length) {
+            this.question_index++;
+        }
         if (this.question_index >= this.questions.length) {
             return "Game over! Halvor vant! Velg 3 personer som skal ta en shotteski med deg";
         }
@@ -120,6 +122,30 @@ class DrinkGame {
         
         return question;
     }
+
+    previousQuestion() {
+        if (this.question_index > 0) {
+            this.question_index--;
+            let question = this.questions[this.question_index];
+            let { playerCount, rangeCount } = countPlaceholdersAndRanges(question);
+            question = replacePlaceholders(question, this.players, this.player_index - playerCount, playerCount);
+            this.player_index -= playerCount;
+
+            if (rangeCount > 0) {
+                question = replaceNumberRangesWithRandomInts(question);
+            }
+            if (this.player_index < 0) {
+                this.player_index = this.players.length - 1;
+                this.players = shuffleArray(this.players);
+            }
+
+            return question;
+        }
+
+        return this.questions[0];
+        
+    }
+    
 
 
 }
