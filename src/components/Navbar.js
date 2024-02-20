@@ -19,7 +19,8 @@ const pages = [
     { link: "crime", name: "Crime" },
     { link: "drage", name: "Dragekurs" },
     { link: "surf", name: "Surfekurs" },
-    { link: "fekte", name: "Fektekurs" }
+    { link: "fekte", name: "Fektekurs" },
+    { link: "questions", name: "100 Spørsmål" }
 ];
 const settings = []//'Profile', 'Account', 'Dashboard', 'Logout'];
 

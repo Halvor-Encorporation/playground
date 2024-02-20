@@ -9,6 +9,7 @@ import Surf from './pages/Surf.js';
 import Fekte from './pages/Fekte.js';
 import Crime from './pages/Crime.js';
 import Navbar from './components/Navbar';
+import Questions from './pages/Questions';
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('G-SERJ5DC5CW');
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/surf" element={<Surf />} />
         <Route path="/fekte" element={<Fekte />} />
         <Route path="/crime" element={<Crime />} />
+        <Route path="/questions" element={<Questions />} />
       </Routes>
     </Router>
   );
