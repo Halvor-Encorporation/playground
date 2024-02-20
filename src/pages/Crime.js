@@ -7,10 +7,39 @@ import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
 import DrinkingGame from '../classes/DrinkingGame';
 
 const Crime = () => {
-  const [players, setPlayers] = useState(["Halvor","Martin","Edvard","Adrian"]);
-  const [gameStarted, setGameStarted] = useState(false);
-  const [gameState, setGameState] = useState(null);
+  const [players, setPlayers] = useState(JSON.parse(localStorage.getItem('players')) || ["Halvor","Martin","Edvard","Adrian"]);
+  const [gameStarted, setGameStarted] = useState(JSON.parse(localStorage.getItem('gameStarted')) || false);
+  const [gameState, setGameState] = useState(JSON.parse(localStorage.getItem('gameState')) || null);
   const [game, setGame] = useState(null);
+
+  useEffect(() => {
+    const savedGame = JSON.parse(localStorage.getItem('game'));
+    if (savedGame) {
+      const loadedGame = new DrinkingGame(savedGame.players);
+      loadedGame.loadState(savedGame); // You need to implement loadState method in DrinkingGame class
+      setGame(loadedGame);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('players', JSON.stringify(players));
+    localStorage.setItem('gameStarted', JSON.stringify(gameStarted));
+    localStorage.setItem('gameState', JSON.stringify(gameState));
+    if (game) {
+      localStorage.setItem('game', JSON.stringify(game.saveState())); // You need to implement saveState method in DrinkingGame class
+    }
+  }, [players, gameStarted, gameState, game]);
+
+  const exitGame = () => {
+    // Reset game state
+    setGameStarted(false);
+    setGameState(null);
+    setGame(null);
+    // Clear saved game state from localStorage
+    localStorage.removeItem('gameStarted');
+    localStorage.removeItem('gameState');
+    localStorage.removeItem('game');
+  };
 
   function deletePlayer(index) {
     const newPlayers = [...players];
@@ -74,6 +103,9 @@ const Crime = () => {
         <Button variant="contained" size="large" onClick={previousQuestion}>Forrige</Button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Button variant="contained" size="large" onClick={newQuestion}>Neste</Button>
+        <br />
+        <Button variant="contained" size="large" onClick={() => exitGame()}>Exit Game</Button>
+
       </div>
       </>
     ) : (

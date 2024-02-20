@@ -170,6 +170,18 @@ const drinkingGameQuestions = [
 
 
     }
+
+    saveState() {
+        return {
+          players: this.players,
+          questionIndex: this.question_index,
+        };
+      }
+    
+      loadState(state) {
+        this.players = state.players;
+        this.question_index = state.questionIndex;
+      }
     
 }
 
