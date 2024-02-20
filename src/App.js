@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage.js';
 import Drage from './pages/Drage.js';
 import Surf from './pages/Surf.js';
@@ -15,7 +15,7 @@ ReactGA.initialize('G-SERJ5DC5CW');
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/fekte" element={<Fekte />} />
         <Route path="/crime" element={<Crime />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
