@@ -20,7 +20,8 @@ const pages = [
     { link: "drage", name: "Dragekurs" },
     { link: "surf", name: "Surfekurs" },
     { link: "fekte", name: "Fektekurs" },
-    { link: "questions", name: "100 Spørsmål" }
+    { link: "questions", name: "100 Spørsmål" },
+    { link: "spinwheel", name: "Spin Wheel" }
 ];
 const settings = []//'Profile', 'Account', 'Dashboard', 'Logout'];
 

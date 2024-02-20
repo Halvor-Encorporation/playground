@@ -10,6 +10,7 @@ import Fekte from './pages/Fekte.js';
 import Crime from './pages/Crime.js';
 import Navbar from './components/Navbar';
 import Questions from './pages/Questions';
+import SpinWheel from './pages/SpinWheel.js';
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('G-SERJ5DC5CW');
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/fekte" element={<Fekte />} />
         <Route path="/crime" element={<Crime />} />
         <Route path="/questions" element={<Questions />} />
+        <Route path="/spinwheel" element={<SpinWheel />} />
       </Routes>
     </Router>
   );
