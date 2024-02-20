@@ -29,9 +29,11 @@ const Crime = () => {
       alert("You need at least 3 players to start the game");
       return;
     }
-    setPlayers(filteredPlayers);
-    setGame(new DrinkingGame(filteredPlayers));
+    const newGame = new DrinkingGame(filteredPlayers);
+    setGame(newGame);
     setGameStarted(true);
+    const intialQuestion = newGame.getIntialQuestion();
+    setGameState(intialQuestion);
   }
 
   function handlePlayerChange(index, value) {
@@ -53,12 +55,14 @@ const Crime = () => {
       setGameState(previous);
     }
   }
-
+  /*
   useEffect(() => {
     if (game) {
       newQuestion();
     }
   }, [game]);
+
+  */
 
   return (
     <div className="App-body">

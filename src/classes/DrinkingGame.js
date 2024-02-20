@@ -46,66 +46,52 @@ const drinkingGameQuestions = [
   "{player} må fortelle om den verste plassen han/hun har spydd."]
   
 
-  
 
-
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function countPlaceholdersAndRanges(str) {
-    // Regular expressions to match placeholders and number-number patterns
-    const playerRegex = /{player}/g;
-    const rangeRegex = /{(\d+-\d+)}/g;
-  
-    // Count the occurrences of {player}
-    const playerCount = (str.match(playerRegex) || []).length;
-  
-    // Count the occurrences of {number-number}
-    const rangeCount = (str.match(rangeRegex) || []).length;
-  
-    return { playerCount, rangeCount };
-  }
-
-function replacePlaceholders(str, players,playerIndex,numberOfPlayers) {
-    for (let i = 0; i < numberOfPlayers; i++) {
-        str = str.replace(/{player}/, players[(playerIndex + i) % players.length]);
-    }
-    return str;
-}
-
-function replaceNumberRangesWithRandomInts(question) {
-    // Regular expression to match number-number patterns
-    const rangeRegex = /{(\d+)-(\d+)}/g;
-  
-    // Replace number ranges with random integers
-    const replacedQuestion = question.replace(rangeRegex, (_, min, max) => {
-      const randomNumber = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
-      return randomNumber.toString();
-    });
-  
-    return replacedQuestion;
-  }
 
   class DrinkGame {
     constructor(players) {
-        this.players = shuffleArray(players);
-        this.questions = shuffleArray(drinkingGameQuestions);
+        this.players = this.shuffleArray(players);
+        this.questions = this.shuffleArray(drinkingGameQuestions);
         this.player_index = 0;
         this.question_index = 0;
         this.playerAssignments = [];
+        this.selectedNumbers = {};
         this.assignPlayersToQuestions();
     }
+
+    shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    countPlaceholdersAndRanges = (str) => {
+        // Regular expressions to match placeholders and number-number patterns
+        const playerRegex = /{player}/g;
+        const rangeRegex = /{(\d+-\d+)}/g;
+      
+        // Count the occurrences of {player}
+        const playerCount = (str.match(playerRegex) || []).length;
+      
+        // Count the occurrences of {number-number}
+        const rangeCount = (str.match(rangeRegex) || []).length;
+      
+        return { playerCount, rangeCount };
+    }
+
+    replacePlaceholders = (str, players,playerIndex,numberOfPlayers) => {
+        for (let i = 0; i < numberOfPlayers; i++) {
+            str = str.replace(/{player}/, players[(playerIndex + i) % players.length]);
+        }
+        return str;
+    }  
 
     assignPlayersToQuestions() {
         for (let i = 0; i < this.questions.length; i++) {
             const question = this.questions[i];
-            const { playerCount } = countPlaceholdersAndRanges(question);
+            const { playerCount } = this.countPlaceholdersAndRanges(question);
             const assignedPlayers = [];
             for (let j = 0; j < playerCount; j++) {
                 assignedPlayers.push(this.players[(this.player_index + j) % this.players.length]);
@@ -115,41 +101,76 @@ function replaceNumberRangesWithRandomInts(question) {
         }
     }
 
+    replaceNumberRangesWithRandomInts = (question, questionIndex) => {
+        // Adjust this method to use stored numbers
+        const rangeRegex = /{(\d+)-(\d+)}/g;
+    
+        return question.replace(rangeRegex, (_, min, max) => {
+            if (!this.selectedNumbers[questionIndex]) {
+                this.selectedNumbers[questionIndex] = {};
+            }
+    
+            const key = `${min}-${max}`;
+            if (!this.selectedNumbers[questionIndex][key]) {
+                // If no number selected for this range, generate one
+                this.selectedNumbers[questionIndex][key] = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
+            }
+    
+            return this.selectedNumbers[questionIndex][key].toString();
+        });
+    }
+
+    getIntialQuestion() {
+        let question = this.questions[this.question_index];
+        let { playerCount, rangeCount } = this.countPlaceholdersAndRanges(question);
+        const assignedPlayers = this.playerAssignments[this.question_index];
+        question = this.replacePlaceholders(question, assignedPlayers, 0, playerCount);
+        if (rangeCount > 0) {
+            question = this.replaceNumberRangesWithRandomInts(question, this.question_index);
+        }
+        return question;
+    }
+
     nextQuestion() {
+        if (this.question_index < this.questions.length) {
+            this.question_index++;
+        }
         if (this.question_index >= this.questions.length) {
             return "Game over! Halvor vant! Velg 3 personer som skal ta en shotteski med deg";
         }
         let question = this.questions[this.question_index];
-        let { playerCount, rangeCount } = countPlaceholdersAndRanges(question);
+        let { playerCount, rangeCount } = this.countPlaceholdersAndRanges(question);
         const assignedPlayers = this.playerAssignments[this.question_index];
-        question = replacePlaceholders(question, assignedPlayers, 0, playerCount);
+        question = this.replacePlaceholders(question, assignedPlayers, 0, playerCount);
 
         if (rangeCount > 0) {
-            question = replaceNumberRangesWithRandomInts(question);
+            question = this.replaceNumberRangesWithRandomInts(question);
         }
-
-        this.question_index++;
 
         return question;
     }
 
     previousQuestion() {
-        if (this.question_index > 1) {
+        console.log(this.question_index);
+        if (this.question_index > 0) {
+            console.log(this.question_index);
             this.question_index--;
-            let question = this.questions[this.question_index - 1];
-            let { playerCount, rangeCount } = countPlaceholdersAndRanges(question);
-            const assignedPlayers = this.playerAssignments[this.question_index - 1];
-            question = replacePlaceholders(question, assignedPlayers, 0, playerCount);
-    
-            if (rangeCount > 0) {
-                question = replaceNumberRangesWithRandomInts(question);
-            }
-    
-            return question;
         }
-    
-        return this.questions[this.question_index - 1];
+
+        let question = this.questions[this.question_index];
+        let { playerCount, rangeCount } = this.countPlaceholdersAndRanges(question);
+        const assignedPlayers = this.playerAssignments[this.question_index];
+        question = this.replacePlaceholders(question, assignedPlayers, 0, playerCount);
+
+        if (rangeCount > 0) {
+            question = this.replaceNumberRangesWithRandomInts(question);
+        }
+
+        return question;
+
+
     }
+    
 }
 
     
