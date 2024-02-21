@@ -33,11 +33,11 @@ const SpinWheel = () => {
             const currentPlayer = game.getCurrentPlayer();
             const nextPlayerExists = game.nextPlayer();
             const newCurrentPlayer = game.getCurrentPlayer();
-            setResult(`Result: ${currentPlayer} - ${option}`);
+            setResult(`${currentPlayer} - ${option}`);
             if (nextPlayerExists) {
                 setCurrentPlayer(newCurrentPlayer);
             } else {
-                setResult(`Game finished. Last result: ${newCurrentPlayer} - ${option}`);
+                setResult(`Game finished. : ${newCurrentPlayer} - ${option}`);
 
                 //TODO: Handle the game finished case, maybe by showing a message or disabling the wheel
             }
@@ -104,14 +104,19 @@ const SpinWheel = () => {
                         value={result}
                         variant="outlined"
                         disabled
-                        InputProps={{ // Use the InputProps to apply styles directly to the input element
-                            style: { minWidth: '500px' } // Adjust minWidth as needed
+                        InputProps={{
+                            style: {
+                                width: '100%', // Set the initial width to 100% of the container
+                                '@media (min-width: 600px)': {
+                                    minWidth: '500px', // Adjust minWidth for screens wider than 600px
+                                },
+                            },
                         }}
                     />
                 </div>
                 <WheelComponent
-                    segments={['Drink 1', 'Drink 2', 'Skip', 'Give 2']} // Define your segments here
-                    segColors={['#FF0000', '#00FF00', '#0000FF', '#FFFF00']} // Define colors for each segment
+                    segments={['Drink 1', 'Drink 2', 'Skip', 'Give 2', 'Drink 3', 'Drink 4', 'Give 1', 'Drink 5', 'Shot']}
+                    segColors={['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFA500', '#800080', '#FF4500']}
                     onFinished={handleSpinFinished}
                     disabled={game && game.gameFinished()}
                 />
