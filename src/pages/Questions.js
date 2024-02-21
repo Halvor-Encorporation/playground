@@ -34,8 +34,8 @@ const Questions = () => {
                     <p>{question}</p>
                 </div>
             ))}
-            <h2>Game over. Chug your drink!</h2>
-            <button onClick={handleNewQuestions}>Gå tilbake / Få nye spørsmål</button> {}
+            <h2>Game over. Chug drinken din!</h2>
+            <button onClick={handleNewQuestions}>Gå tilbake</button> {}
         </div>
     );
 };
