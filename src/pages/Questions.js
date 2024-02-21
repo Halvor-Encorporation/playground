@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getRandomQuestions } from '../classes/QuestionGame';
+
 /**
  * Pages file for the 100-question game
  */
@@ -16,6 +17,7 @@ const Questions = () => {
 
     const goBackHome = () => {
         navigate('/');
+        window.scrollTo(0, 0);
     };
 
     return (
