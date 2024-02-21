@@ -24,7 +24,8 @@ const SpinWheel = () => {
     }, [gameStarted, players]);
 
     useEffect(() => {
-        localStorage.setItem('players', JSON.stringify(players));
+        const validPlayers = players.filter(player => player.trim() !== '');
+        localStorage.setItem('players', JSON.stringify(validPlayers));
     }, [players]);
 
     const handleSpinFinished = (option) => {
@@ -37,7 +38,8 @@ const SpinWheel = () => {
             if (nextPlayerExists) {
                 setCurrentPlayer(newCurrentPlayer);
             } else {
-                setResult(`Game finished. : ${newCurrentPlayer} - ${option}`);
+                setCurrentPlayer('Game Finished');
+                setResult(`${newCurrentPlayer} - ${option}`);
 
                 //TODO: Handle the game finished case, maybe by showing a message or disabling the wheel
             }
@@ -49,10 +51,12 @@ const SpinWheel = () => {
     
 
     const startGame = () => {
+        const validPlayers = players.filter(player => player.trim() !== '');
         if (players.length < 2) {
             alert('You need at least 2 players to start the game');
             return;
         }
+        setPlayers(validPlayers);
         setGameStarted(true);
     };
 
