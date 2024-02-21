@@ -10,19 +10,12 @@ const Questions = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const storedQuestions = localStorage.getItem('randomQuestions');
-        if (storedQuestions) {
-            setRandomQuestions(JSON.parse(storedQuestions));
-        } else {
-            const newQuestions = getRandomQuestions();
-            localStorage.setItem('randomQuestions', JSON.stringify(newQuestions));
-            setRandomQuestions(newQuestions);
-        }
+        const newQuestions = getRandomQuestions();
+        setRandomQuestions(newQuestions);
     }, []);
 
     const handleNewQuestions = () => {
-        localStorage.removeItem('randomQuestions');
-        navigate('/'); 
+        navigate('/');
     };
 
     return (
