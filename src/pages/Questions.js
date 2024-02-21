@@ -14,7 +14,7 @@ const Questions = () => {
         setRandomQuestions(newQuestions);
     }, []);
 
-    const handleNewQuestions = () => {
+    const goBackHome = () => {
         navigate('/');
     };
 
@@ -28,7 +28,7 @@ const Questions = () => {
                 </div>
             ))}
             <h2>Game over. Chug drinken din!</h2>
-            <button onClick={handleNewQuestions}>Gå tilbake</button> {}
+            <button onClick={goBackHome}>Gå tilbake</button> {}
         </div>
     );
 };
