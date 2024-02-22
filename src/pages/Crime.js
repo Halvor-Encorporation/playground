@@ -81,7 +81,6 @@ const Crime = () => {
       </>
     ) : (
       <>
-      <h1>Crime</h1>
       <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame} />
       </>
     )}
