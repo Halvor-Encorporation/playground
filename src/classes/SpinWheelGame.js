@@ -1,10 +1,18 @@
 // ./classes/SpinWheelGame.js
 export default class SpinWheelGame {
     constructor(players) {
-      this.players = players;
+      this.players = this.shuffleArray([...players]);
       this.currentPlayerIndex = 0;
       this.isGameFinished = false;
     }
+
+    shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+  }
   
     getCurrentPlayer() {
       return this.players[this.currentPlayerIndex];
