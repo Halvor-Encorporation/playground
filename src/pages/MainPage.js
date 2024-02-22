@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 
-import logo from '../logo.svg';
+
 import '../App.css';
 import halvorImage from '../images/halvor.jpg'; // Add this line
 import { Link } from 'react-router-dom';
