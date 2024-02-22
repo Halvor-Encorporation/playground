@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 import Button from '@mui/material/Button';
 import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
+import { useEffect } from 'react';
 
 const RegisterPlayerField = (props) => {
     /**
@@ -28,6 +29,19 @@ const RegisterPlayerField = (props) => {
 
     const finalButtonText = buttonText ? buttonText : 'Start Game';
     const finalPlayerLowerLimit = playerLowerLimit ? playerLowerLimit : 3;
+    const localStoredPlayers = JSON.parse(localStorage.getItem('players'));
+
+    useEffect(() => {
+        // Fetch players from localStorage when component mounts
+        if (players.length === 0) {
+            setPlayers(localStoredPlayers || [Array(finalPlayerLowerLimit).fill('')]);
+        }
+    }, []); // Empty dependency array ensures the effect runs only once when the component mounts
+
+    useEffect(() => {
+        const validPlayers = players.filter(player => player.trim() !== '');
+        localStorage.setItem('players', JSON.stringify(validPlayers));
+    }, [players]);
 
     function addPlayer() {
         const newPlayers = [...players, ''];

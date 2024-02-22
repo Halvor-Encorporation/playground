@@ -7,7 +7,7 @@ import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
 import DrinkingGame from '../classes/DrinkingGame';
 import RegisterPlayerField from '../components/RegisterPlayerField';
 const Crime = () => {
-  const [players, setPlayers] = useState(JSON.parse(localStorage.getItem('players')) || ["Halvor","Martin","Edvard","Adrian"]);
+  const [players, setPlayers] = useState([]);
   const [gameStarted, setGameStarted] = useState(JSON.parse(localStorage.getItem('gameStarted')) || false);
   const [gameState, setGameState] = useState(JSON.parse(localStorage.getItem('gameState')) || null);
   const [game, setGame] = useState(null);
@@ -22,13 +22,12 @@ const Crime = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('players', JSON.stringify(players));
     localStorage.setItem('gameStarted', JSON.stringify(gameStarted));
     localStorage.setItem('gameState', JSON.stringify(gameState));
     if (game) {
       localStorage.setItem('game', JSON.stringify(game.saveState())); // You need to implement saveState method in DrinkingGame class
     }
-  }, [players, gameStarted, gameState, game]);
+  }, [gameStarted, gameState, game]);
 
   const exitGame = () => {
     // Reset game state
@@ -42,12 +41,7 @@ const Crime = () => {
   };
 
   function startGame() {
-    const filteredPlayers = players.filter(player => player !== "");
-    if (filteredPlayers.length < 3) {
-      alert("You need at least 3 players to start the game");
-      return;
-    }
-    const newGame = new DrinkingGame(filteredPlayers);
+    const newGame = new DrinkingGame(players);
     setGame(newGame);
     setGameStarted(true);
     const intialQuestion = newGame.getIntialQuestion();
