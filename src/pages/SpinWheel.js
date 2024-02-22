@@ -6,9 +6,9 @@ import { Button, TextField, IconButton } from '@mui/material';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { useNavigate } from 'react-router-dom';
-
+import RegisterPlayerField from '../components/RegisterPlayerField.js';
 const SpinWheel = () => {
-    const [players, setPlayers] = useState(JSON.parse(localStorage.getItem('players')) || []);
+    const [players, setPlayers] = useState([]);
     const [game, setGame] = useState(null);
     const [currentPlayer, setCurrentPlayer] = useState('');
     const [gameStarted, setGameStarted] = useState(false);
@@ -21,13 +21,9 @@ const SpinWheel = () => {
             setGame(newGame);
             setCurrentPlayer(newGame.getCurrentPlayer());
         }
-    }, [gameStarted, players]);
+    }, [gameStarted]);
 
-    useEffect(() => {
-        const validPlayers = players.filter(player => player.trim() !== '');
-        localStorage.setItem('players', JSON.stringify(validPlayers));
-    }, [players]);
-
+    
     const handleSpinFinished = (option) => {
         // Check if game is not null before proceeding
         if (game) {
@@ -51,49 +47,16 @@ const SpinWheel = () => {
     
 
     const startGame = () => {
-        const validPlayers = players.filter(player => player.trim() !== '');
-        if (players.length < 2) {
-            alert('You need at least 2 players to start the game');
-            return;
-        }
-        setPlayers(validPlayers);
+
+        setPlayers(players);
         setGameStarted(true);
     };
 
-    const addPlayer = () => {
-        const newPlayer = '';
-        setPlayers(prevPlayers => [...prevPlayers, newPlayer]);
-    };
-
-    const deletePlayer = (index) => {
-        setPlayers(prevPlayers => prevPlayers.filter((_, i) => i !== index));
-    }
-
-    const handlePlayerChange = (index, event) => {
-        setPlayers(prevPlayers => prevPlayers.map((player, i) => i === index ? event.target.value : player));
-    }
         
     if (!gameStarted || !game) return (
         <div className="App-body">
             <h1>Spin The Wheel Game</h1>
-            {players.map((player, index) => (
-                <div key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-                    <TextField
-                        variant="outlined"
-                        value={player}
-                        onChange={(event) => handlePlayerChange(index, event)}
-                        style={{ marginRight: '10px' }}
-                    />
-                    <IconButton onClick={() => deletePlayer(index)}>
-                        <DeleteForeverIcon />
-                    </IconButton>
-                </div>
-            ))}
-            <IconButton onClick={addPlayer} style={{ marginTop: '10px' }}>
-                <AddCircleOutlineIcon />
-            </IconButton>
-            <br />
-            <Button variant="contained" onClick={startGame} style={{ marginTop: '20px' }}>Start Game</Button>
+            <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame} playerLowerLimit = {2} />
         </div>
     );
 

@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter
 import MainPage from './pages/MainPage.js';
 import Drage from './pages/Drage.js';
 import Surf from './pages/Surf.js';
@@ -33,4 +33,5 @@ const App = () => {
 };
 
 export default App;
+
 
