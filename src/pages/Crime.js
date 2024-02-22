@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
 import DrinkingGame from '../classes/DrinkingGame';
 import RegisterPlayerField from '../components/RegisterPlayerField';
+
 const Crime = () => {
   const [players, setPlayers] = useState([]);
   const [gameStarted, setGameStarted] = useState(JSON.parse(localStorage.getItem('gameStarted')) || false);

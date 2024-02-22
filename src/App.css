@@ -1,5 +1,6 @@
  body {
   text-align: center;
+  background-color: lightblue;
 }
 
 .App-logo {
@@ -24,12 +25,12 @@
 
 .App-body {
   background-color: lightblue;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Add this line */
-
+  
   font-size: calc(10px + 2vmin);
   color: black;
 }
@@ -66,5 +67,20 @@ a {
   margin: 20px;
 }
 
+.pageBox {
+  margin-top: 5%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.pageBox:hover {
+  background-color: lightgray; /* Change background color on hover */
+}
 

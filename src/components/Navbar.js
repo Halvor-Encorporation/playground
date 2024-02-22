@@ -14,15 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 import MenuImg from '../images/halvor.jpg'; // Add this line
+import {NavbarInfo} from '../PageStructure';
 
-const pages = [
-    { link: "crime", name: "Crime" },
-    { link: "drage", name: "Dragekurs" },
-    { link: "surf", name: "Surfekurs" },
-    { link: "fekte", name: "Fektekurs" },
-    { link: "questions", name: "100 Spørsmål" },
-    { link: "spinwheel", name: "Spin Wheel" }
-];
+console.log(NavbarInfo)
+const pages = NavbarInfo
 const settings = []//'Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
