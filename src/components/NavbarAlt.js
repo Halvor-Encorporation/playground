@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 import MenuImg from '../images/halvor.jpg'; // Add this line
-import {NavbarInfo} from '../PageStructure';
+import { NavbarInfo } from '../PageStructure';
 
 console.log(NavbarInfo)
 const pages = NavbarInfo
@@ -43,27 +43,26 @@ function Navbar() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: 'flex' ,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        <img src={MenuImg} className="Nav-image" alt="Halvor" /> {/* Add this line */}
-                    </Typography>
-
-                   
-                    <Box sx={{ flexGrow: 1, display: 'flex'  }}>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: 'flex' ,
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            <img src={MenuImg} className="Nav-image" alt="Halvor" /> {/* Add this line */}
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}>
                         {pages.map((page) => (
                             <Link to={"/" + page.link}>
                                 <Button
