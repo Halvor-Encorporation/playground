@@ -1,5 +1,5 @@
 {
-  "homepage": "https://halvorhub.com",
+  "homepage": "https://dev.halvorhub.com",
   "name": "halvorhub",
   "version": "1.0.1",
   "private": true,
@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --cname halvorhub.com",
+    "deploy": "gh-pages -d build --cname dev.halvorhub.com",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
