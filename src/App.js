@@ -9,6 +9,7 @@ import Crime from './pages/Crime.js';
 import Navbar from './components/NavbarAlt';
 import Questions from './pages/Questions';
 import SpinWheel from './pages/SpinWheel.js';
+import Roulette from './pages/Roulette.js';
 import Navigation from './pages/Navigation.js';
 import ReactGA from 'react-ga';
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/navigation" element={<Navigation />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/spinwheel" element={<SpinWheel />} />
+        <Route path="/roulette" element={<Roulette />} />
       </Routes>
     </Router>
   );

@@ -8,6 +8,7 @@ const pageStructure = {
         {"title": "Crime 💀", "path": "crime"},
         {"title": "100 Spørsmål🍸🍻", "path": "questions"},
         {"title": "Spin the Wheel🎡", "path": "spinwheel"},
+        {"title": "Roulette", "path": "roulette"},
       ]
     },
     'courses': {
