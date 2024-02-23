@@ -66,6 +66,12 @@ const Roulette = () => {
         alignItems: 'center',
         visibility: showPrize ? 'visible' : 'hidden', // Hide the content but reserve the space
         fontSize: '40px',
+        color: 'white',
+        border: '2px solid white',
+        borderRadius: '10px',
+        margin: '0 auto',
+        width: '50%',            
+        backgroundColor: showPrize ? rouletteData[prizeNumber].style.backgroundColor : 'transparent',
     };
 
     // Add media query for phones
