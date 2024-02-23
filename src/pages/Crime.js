@@ -6,12 +6,16 @@ import Button from '@mui/material/Button';
 import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
 import DrinkingGame from '../classes/DrinkingGame';
 import RegisterPlayerField from '../components/RegisterPlayerField';
+import SelectionMenu from '../components/SelectionMenu';
 
 const Crime = () => {
   const [players, setPlayers] = useState([]);
   const [gameStarted, setGameStarted] = useState(JSON.parse(localStorage.getItem('gameStarted')) || false);
   const [gameState, setGameState] = useState(JSON.parse(localStorage.getItem('gameState')) || null);
   const [game, setGame] = useState(null);
+
+  const [exclusiveSelected, setExclusiveSelected] = useState('Crime');
+  const [multipleSelected, setMultipleSelected] = useState([]);
 
   useEffect(() => {
     const savedGame = JSON.parse(localStorage.getItem('game'));
@@ -67,25 +71,31 @@ const Crime = () => {
 
   return (
     <div className="App-body">
-        <h1>Crime</h1>
-    {gameStarted ? (
-      <>
-      <p>{gameState}</p>
-      <div className="buttonContainer">
-        <Button variant="contained" size="large" onClick={previousQuestion}>Forrige</Button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button variant="contained" size="large" onClick={newQuestion}>Neste</Button>
-        <br />
-        <Button variant="contained" size="large" onClick={() => exitGame()}>Exit Game</Button>
-
-      </div>
-      </>
-    ) : (
-      <>
-      <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame}  playerLowerLimit={4} />
-      </>
-    )}
+      <h1>Crime</h1>
+      {gameStarted ? (
+        <>
+          <p>{gameState}</p>
+          <div className="buttonContainer">
+            <Button variant="contained" size="large" onClick={previousQuestion}>Forrige</Button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Button variant="contained" size="large" onClick={newQuestion}>Neste</Button>
+            <br />
+            <Button variant="contained" size="large" onClick={() => exitGame()}>Exit Game</Button>
+          </div>
+        </>
+      ) : (
+        <>
+          <SelectionMenu
+            exclusiveSelected={exclusiveSelected}
+            setExclusiveSelected={setExclusiveSelected}
+            multipleSelected={multipleSelected}
+            setMultipleSelected={setMultipleSelected}
+          />
+          <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame} playerLowerLimit={4} />
+        </>
+      )}
     </div>
+
     
   );
 };
