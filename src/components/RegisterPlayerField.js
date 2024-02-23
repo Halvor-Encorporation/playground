@@ -39,8 +39,11 @@ const RegisterPlayerField = (props) => {
     }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
     useEffect(() => {
-        const validPlayers = players.filter(player => player.trim() !== '');
-        localStorage.setItem('players', JSON.stringify(validPlayers));
+        if (players.length === 0) { //In case this is runned before the players are set
+            const validPlayers = players.filter(player => player.trim() !== '');
+            localStorage.setItem('players', JSON.stringify(validPlayers));
+        }
+            
     }, [players]);
 
     function addPlayer() {
