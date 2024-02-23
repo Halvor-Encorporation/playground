@@ -34,7 +34,7 @@ const RegisterPlayerField = (props) => {
     useEffect(() => {
         // Fetch players from localStorage when component mounts
         if (players.length === 0) {
-            setPlayers(Array(finalPlayerLowerLimit).fill(''));
+            setPlayers(localStoredPlayers || Array(finalPlayerLowerLimit).fill(''));
         }
     }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
