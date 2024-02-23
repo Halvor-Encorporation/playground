@@ -82,7 +82,7 @@ const Crime = () => {
       </>
     ) : (
       <>
-      <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame} />
+      <RegisterPlayerField players={players} setPlayers={setPlayers} startGame={startGame}  playerLowerLimit={4} />
       </>
     )}
     </div>

@@ -34,12 +34,12 @@ const RegisterPlayerField = (props) => {
     useEffect(() => {
         // Fetch players from localStorage when component mounts
         if (players.length === 0) {
-            setPlayers(localStoredPlayers || [Array(finalPlayerLowerLimit).fill('')]);
+            setPlayers(Array(finalPlayerLowerLimit).fill(''));
         }
     }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
     useEffect(() => {
-        if (players.length === 0) { //In case this is runned before the players are set
+        if (players.length !== 0) { //In case this is runned before the players are set
             const validPlayers = players.filter(player => player.trim() !== '');
             localStorage.setItem('players', JSON.stringify(validPlayers));
         }
@@ -84,7 +84,12 @@ const RegisterPlayerField = (props) => {
                             value={player}
                             onChange={(e) => handlePlayerChange(index, e.target.value)}
                         />
-                        <IconButton size="large" className="deleteButton" onClick={() => deletePlayer(index)}>
+                        <IconButton
+                            size="large"
+                            className="deleteButton"
+                            onClick={() => deletePlayer(index)}
+                            style={{ visibility: players.length > finalPlayerLowerLimit ? 'visible' : 'hidden' }}
+                        >
                             <DeleteForever />
                         </IconButton>
                     </div>
