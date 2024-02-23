@@ -82,8 +82,8 @@ const SpinWheel = () => {
                     />
                 </div>
                 <WheelComponent
-                    segments={['Drink 1', 'Drink 2', 'Skip', 'Give 2', 'Drink 3', 'Drink 4', 'Give 1', 'Drink 5', 'Shot']}
-                    segColors={['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFA500', '#800080', '#FF4500']}
+                    segments={['Drink 1', 'Give 1', 'Drink 2', 'Give 1', 'Give 1', 'Drink 2', 'Give 1', 'Give 2', 'Drink 4', 'Skip', 'Drink 5', 'Drink 3', 'Drink 1', 'Drink 2', 'Give 2', 'Drink 1', 'Drink 3', 'Shot', 'Drink 1']}
+                    segColors={['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFA500', '#800080', '#FF4500', '#FFD700', '#FF69B4', '#8A2BE2', '#00FF7F', '#FF1493', '#FF6347', '#FF00FF', '#FF0000', '#00FF00', '#0000FF']}
                     onFinished={handleSpinFinished}
                     disabled={game && game.gameFinished()}
                 />
