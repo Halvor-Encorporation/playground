@@ -2,6 +2,7 @@
 import React from 'react';
 import Rule from '../components/Rule.js'; // Import the Rule component
 import gameImage from '../data/sveinung.png';
+import '../App.css';
 
 const SveinungGameRules = () => {
   // Define the game rules
@@ -16,7 +17,7 @@ const SveinungGameRules = () => {
     <div>
       <h1>Sveinung's drikkelek</h1>
       <div style={{ marginTop: '20px' }}>
-        <img src={gameImage} alt="Game illustration" style={{ maxWidth: '30%', height: 'auto', borderRadius: '90%' }} />
+        <img src={gameImage} alt="Game illustration" className="gameImage" style={{ borderRadius: '90%', height: 'auto' }} />
       </div>
       <h2>Anbefalt spillere: 4-9 personer</h2>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
