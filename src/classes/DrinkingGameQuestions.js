@@ -112,11 +112,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.", //crazy
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Shot in a box: {player} mot {player}. En person får sprit, den andre vann. Resten peker på den de tror tok shotten. Bommer man er det {4-6} straffeslurker.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Alle fra Østlandet drikker {2-4} slurker.",
@@ -304,7 +304,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} mot {player} race rundt kollektivet, taperen tar et shot.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "{player} skål med den du ville hatt med deg på en øde øye.",
@@ -360,7 +360,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player}, {player}, {player} og {player}. Legg mobilene deres på bordet. Første som får varsel må ta en shot.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Sett på «Rattlin' Bog».",
@@ -388,7 +388,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg som må være med på shotteski, den du velger må velge neste.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Gulvet er lava, sistemann må ta {6-10} slurker.",
@@ -408,7 +408,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg en å ta en shot med.",
-        tagg: ["c","s"]
+        tagg: ["cp","s"]
     },
     {
         text: "{player} bonski med personen tvers over deg.",
@@ -737,7 +737,7 @@ const drinkingGameQuestions = [
     {
         text: "Pekelek: Hvem deltar aktivt på BDSM-fester.",
         tagg: ["j"]
-    },
+    }
 
 
     
