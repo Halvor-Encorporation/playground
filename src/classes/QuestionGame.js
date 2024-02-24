@@ -9,7 +9,12 @@ export const getRandomQuestions = () => {
     const allQuestions = Object.values(questions);
 
     const currentDate = new Date();
-    const seed = currentDate.getFullYear() * 10000 + (currentDate.getMonth() + 1) * 100 + currentDate.getDate();
+    const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
+    const diff = currentDate - startOfYear;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+
+    const seed = currentDate.getFullYear() * 1000 + dayOfYear;
 
     const shuffledQuestions = shuffle(allQuestions, seed);
 

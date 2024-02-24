@@ -84,3 +84,42 @@ a {
   background-color: lightgray; /* Change background color on hover */
 }
 
+
+
+.wheel-container {
+  position: relative;
+}
+
+.gameImage {
+  width: 80%; /* Good size for small devices */
+  max-width: 100%; /* Ensures image is not bigger than its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 90%;
+  display: block; /* Ensures the image is centered */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .gameImage {
+    width: 50%; /* Larger than on mobile, but not too big */
+  }
+}
+
+@media (min-width: 1024px) {
+  .gameImage {
+    width: 30%; /* Ideal for desktops and large tablets */
+  }
+}
+
+.question-container {
+  width: 95%; /* Default width for smaller devices like phones */
+  margin: auto; /* Centers the container */
+}
+
+/* Media query for devices with a width of 768px or more (typically tablets and desktops) */
+@media (min-width: 768px) {
+  .question-container {
+    width: 60%; /* Adjusted width for larger devices like PCs */
+  }
+}
