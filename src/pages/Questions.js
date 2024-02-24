@@ -48,7 +48,7 @@ const Questions = () => {
             )}
             <h2>Game over. Chug drinken din!</h2>
             <p>Dette gjelder spilleren som holder kasteobjektet</p>
-            <button onClick={goBackHome}>Gå tilbake</button>
+            <button style={{ fontSize: '20px', padding: '10px 20px', marginBottom: '20px' }} onClick={goBackHome}>Gå tilbake</button> {/* Adjusted button size and added margin */}
         </div>
     
 
