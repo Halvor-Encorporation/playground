@@ -7,130 +7,6 @@
 
 const drinkingGameQuestions = [
     {
-        text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.",
-        tagg: ["c","s","a"]
-    },
-    {
-        text: "Shot in a box: {player} mot {player}. En person får sprit, den andre vann. Resten peker på den de tror tok shotten. Bommer man er det {4-6} straffeslurker.",
-        tagg: ["c","s","a"]
-    },
-    {
-        text: "Alle fra Østlandet drikker {2-4} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} trekker en Sveinung, og drikker antall slurker som på kortet. Bildekort er 10 slurker. {player} bestemmer om A er 1 eller 10.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} nevner så mange øl-merker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} nevner så mange bilmerker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} nevner så mange land på Z de kan på 20 sekunder. {player} drikker like mange slurker som land nevnt. Hvis man ikke klarer å nevne flere enn 3 land blir dette 5 straffeslurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som bruker briller drikker {3-5} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som ikke bruker briller drikker {3-5} smug slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som liker katter over hunder drikker {4-5} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Dem som har vært inne på HalvorHub før drikker {3-5} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} drikker en slurk for hvert år han/hun har studert i Trondheim.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som har blitt kastet ut flest ganger fra utesteder.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som har hatt trekant.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som har gjort flest crimes.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som blir gravid eller gjør noen gravid først.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som spyr i kveld.",
-        tagg: ["c",]
-    },
-    {
-        text: "Pekelek: Pek på den som minner deg mest om Magic Mike.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} må fortelle om den verste plassen han/hun har spydd.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som har sendt en flørtende melding til feil person tar {3-5} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som har løyet om sin alder for å komme inn på en bar tar {3-5} slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "{player} må ta 3 slurker for hver 10. armheving {player} klarer",
-        tagg: ["c","a"]
-    },
-    {
-        text: "{player} må fortelle om den verste plassen han/hun har spydd.",
-        tagg: ["c",]
-    },
-    {
-        text: "Drikk {3-5} hvis du har sovet i sengen/reisesengen til Halvor.",
-        tagg: ["cp"]
-    },
-    {
-        text: "Den som leser dette spørsmålet drikker 3 slurker.",
-        tagg: ["c",]
-    },
-    {
-        text: "Alle som har rotet med vennen/venninnen til {player}.",
-        tagg: ["cp"]
-    },
-    {
-        text: "Betting: {player} mot {player}: 90-graderen. Alle kan vedde i mot en av spillerene. Vinner spilleren kan vedkommende dele ut like mange slurker som de veddet i mot. Taper man drikker man antallet slurker.",
-        tagg: ["c","a"]
-    },
-    {
-        text: "Vi vet alle at {player} aldri sier nei til et ligg. Pek på den i rommet du synest er mest digg.",
-        tagg: ["cp"]
-    },
-    {
-        text: "Hva er {6-12}*{6-12}? (drikke antall slurker du bommet med).",
-        tagg: ["c",]
-    },
-    {
-        text: "Vi er jævla lei av at {player} og {player} snakker i lag. Hver gang dere prater i lag tar dere {3-6} slurker. (Resten av spillet).",
-        tagg: ["cp"]
-    },
-    {
-        text: "{player} vs {player}: Kategori Z. Nevn annenhver gang frem til en ikke kommer opp med flere, eller nevner noe som allerede er nevnt.",
-        tagg: ["c",]
-    },
-    {
         text: "{player} skåler med den personen som har hatt klamydia sist.",
         tagg: ["c",]
     },
@@ -236,11 +112,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.", //crazy
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Shot in a box: {player} mot {player}. En person får sprit, den andre vann. Resten peker på den de tror tok shotten. Bommer man er det {4-6} straffeslurker.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Alle fra Østlandet drikker {2-4} slurker.",
@@ -428,7 +304,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} mot {player} race rundt kollektivet, taperen tar et shot.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "{player} skål med den du ville hatt med deg på en øde øye.",
@@ -484,7 +360,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player}, {player}, {player} og {player}. Legg mobilene deres på bordet. Første som får varsel må ta en shot.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Sett på «Rattlin' Bog».",
@@ -512,7 +388,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg som må være med på shotteski, den du velger må velge neste.",
-        tagg: ["c","a","s"]
+        tagg: ["cp","a","s"]
     },
     {
         text: "Gulvet er lava, sistemann må ta {6-10} slurker.",
@@ -532,7 +408,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg en å ta en shot med.",
-        tagg: ["c","s"]
+        tagg: ["cp","s"]
     },
     {
         text: "{player} bonski med personen tvers over deg.",
@@ -789,7 +665,82 @@ const drinkingGameQuestions = [
     {
         text: "Jeg har aldri blitt fanget i å stalke noen på sosiale medier.",
         tagg: ["cp"]
+    },
+    {
+        text: "{player}, hva er ditt go-to sexleketøy? Alle skåler for dette!",
+        tagg: ["j"]
+    },
+    {
+        text: "{player}, ta en bodyshot fra valgfri person.",
+        tagg: ["j"]
+    },
+    {
+        text: "Jeg har aldri pult noen jeg ikke husker navnet til.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Jeg har aldri hatt sex med en prosituert",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din oppfører seg som {player}.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din har hatt sex med {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din vil ha trekant sammen med {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din ser på porno isteden for å ligge med deg.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din kjenner {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din ser på 2. verdenskrigs-dokuentarer.",
+        tagg: ["c"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din studerer på Dragvoll",
+        tagg: ["c"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din har sovet i reisesengen til Halvor.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din din får regelmessig middagsbesøk av {player}.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din er flagget av PST.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din kan løse rubiks kube.",
+        tagg: ["c"]
+    },
+    {
+        text: "{player}, hvem av {player} og {player} tror du er best i senga? Fuckboyen/hoen tar {3-5} slurker.",
+        tagg: ["j"]
+    },
+    {
+        text: "Alle på vorset skal winge {player} i dag. Skål for dette!",
+        tagg: ["j"]
+    },
+    {
+        text: "Pekelek: Hvem deltar aktivt på BDSM-fester.",
+        tagg: ["j"]
     }
+
+
+    
 ]
 
 export default drinkingGameQuestions;
