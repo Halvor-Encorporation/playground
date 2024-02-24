@@ -111,7 +111,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.", //crazy
+        text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.",
         tagg: ["cp","a","s"]
     },
     {
@@ -235,7 +235,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "{player} ringer og spør om du kan være med han/hun å gjemme et lik, drikk {3-5}.",
+        text: "{player} ringer og spør om du kan være med han/hun å gjemme et lik, hva gjør du? drikk {3-5}.",
         tagg: ["j"]
     },
     {
@@ -679,7 +679,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri hatt sex med en prosituert",
+        text: "Jeg har aldri hatt sex med en prostituert",
         tagg: ["j"]
     },
     {
