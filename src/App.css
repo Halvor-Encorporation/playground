@@ -111,3 +111,15 @@ a {
     width: 30%; /* Ideal for desktops and large tablets */
   }
 }
+
+.question-container {
+  width: 95%; /* Default width for smaller devices like phones */
+  margin: auto; /* Centers the container */
+}
+
+/* Media query for devices with a width of 768px or more (typically tablets and desktops) */
+@media (min-width: 768px) {
+  .question-container {
+    width: 60%; /* Adjusted width for larger devices like PCs */
+  }
+}
