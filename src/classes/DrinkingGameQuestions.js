@@ -665,7 +665,82 @@ const drinkingGameQuestions = [
     {
         text: "Jeg har aldri blitt fanget i å stalke noen på sosiale medier.",
         tagg: ["cp"]
-    }
+    },
+    {
+        text: "{player}, hva er ditt go-to sexleketøy? Alle skåler for dette!",
+        tagg: ["j"]
+    },
+    {
+        text: "{player}, ta en bodyshot fra valgfri person.",
+        tagg: ["j"]
+    },
+    {
+        text: "Jeg har aldri pult noen jeg ikke husker navnet til.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Jeg har aldri hatt sex med en prosituert",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din oppfører seg som {player}.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din har hatt sex med {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din vil ha trekant sammen med {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din ser på porno isteden for å ligge med deg.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din kjenner {player}.",
+        tagg: ["j"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din ser på 2. verdenskrigs-dokuentarer.",
+        tagg: ["c"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din studerer på Dragvoll",
+        tagg: ["c"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din har sovet i reisesengen til Halvor.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din din får regelmessig middagsbesøk av {player}.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din er flagget av PST.",
+        tagg: ["cp"]
+    },
+    {
+        text: "Ok, red flag eller dealbreaker. Partneren din kan løse rubiks kube.",
+        tagg: ["c"]
+    },
+    {
+        text: "{player}, hvem av {player} og {player} tror du er best i senga? Fuckboyen/hoen tar {3-5} slurker.",
+        tagg: ["j"]
+    },
+    {
+        text: "Alle på vorset skal winge {player} i dag. Skål for dette!",
+        tagg: ["j"]
+    },
+    {
+        text: "Pekelek: Hvem deltar aktivt på BDSM-fester.",
+        tagg: ["j"]
+    },
+
+
+    
 ]
 
 export default drinkingGameQuestions;
