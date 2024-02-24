@@ -46,7 +46,7 @@ const Crime = () => {
   };
 
   function startGame() {
-    const newGame = new DrinkingGame(players);
+    const newGame = new DrinkingGame(players,exclusiveSelected,multipleSelected);
     setGame(newGame);
     setGameStarted(true);
     const intialQuestion = newGame.getIntialQuestion();

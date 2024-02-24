@@ -8,95 +8,95 @@
 const drinkingGameQuestions = [
     {
         text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.",
-        tagg: ["s","a"]
+        tagg: ["c","s","a"]
     },
     {
         text: "Shot in a box: {player} mot {player}. En person får sprit, den andre vann. Resten peker på den de tror tok shotten. Bommer man er det {4-6} straffeslurker.",
-        tagg: ["s","a"]
+        tagg: ["c","s","a"]
     },
     {
         text: "Alle fra Østlandet drikker {2-4} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} trekker en Sveinung, og drikker antall slurker som på kortet. Bildekort er 10 slurker. {player} bestemmer om A er 1 eller 10.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange øl-merker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange bilmerker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange land på Z de kan på 20 sekunder. {player} drikker like mange slurker som land nevnt. Hvis man ikke klarer å nevne flere enn 3 land blir dette 5 straffeslurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som bruker briller drikker {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som ikke bruker briller drikker {3-5} smug slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som liker katter over hunder drikker {4-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Dem som har vært inne på HalvorHub før drikker {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} drikker en slurk for hvert år han/hun har studert i Trondheim.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som har blitt kastet ut flest ganger fra utesteder.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som har hatt trekant.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som har gjort flest crimes.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som blir gravid eller gjør noen gravid først.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som spyr i kveld.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som minner deg mest om Magic Mike.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} må fortelle om den verste plassen han/hun har spydd.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har sendt en flørtende melding til feil person tar {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har løyet om sin alder for å komme inn på en bar tar {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} må ta 3 slurker for hver 10. armheving {player} klarer",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "{player} må fortelle om den verste plassen han/hun har spydd.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Drikk {3-5} hvis du har sovet i sengen/reisesengen til Halvor.",
@@ -104,7 +104,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Den som leser dette spørsmålet drikker 3 slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har rotet med vennen/venninnen til {player}.",
@@ -112,7 +112,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Betting: {player} mot {player}: 90-graderen. Alle kan vedde i mot en av spillerene. Vinner spilleren kan vedkommende dele ut like mange slurker som de veddet i mot. Taper man drikker man antallet slurker.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "Vi vet alle at {player} aldri sier nei til et ligg. Pek på den i rommet du synest er mest digg.",
@@ -120,7 +120,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Hva er {6-12}*{6-12}? (drikke antall slurker du bommet med).",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Vi er jævla lei av at {player} og {player} snakker i lag. Hver gang dere prater i lag tar dere {3-6} slurker. (Resten av spillet).",
@@ -128,27 +128,27 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} vs {player}: Kategori Z. Nevn annenhver gang frem til en ikke kommer opp med flere, eller nevner noe som allerede er nevnt.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skåler med den personen som har hatt klamydia sist.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skaler med de som har laget spillet.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skåler med de 2 personene som har et øye for hverandre.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skåler med det motsatte kjønn og avslutter med et kompliment.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skåler med personen de har et øye for.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skåler med den kåteste.",
@@ -164,23 +164,23 @@ const drinkingGameQuestions = [
     },
     {
         text: "Edvard skåler med den fineste personen fra Nord-Norge.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle single skåler.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle simper skåler. (Spesielt du {player})",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} må løpe en runde rundt kollektivet og må drikke en slurk for hvert 2. sekund brukt. Forstått? Ok, klar, ferdig, gå!",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "{player}, {player}, {player} og {player} må ta en shotteski.",
-        tagg: ["s","a","j"]
+        tagg: ["c","s","a","j"]
     },
     {
         text: "{player} tar en slurk for hver bioperson i rommet. Hvis det er ingen må du ta 5 slurker.",
@@ -192,11 +192,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Alle som ikke bor her må ta {3-4} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Stirrekonkurranse mellom {player} og {player}. Taperen må ta {4-5} slurker.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "Pekelek: Pek på den som gjør crime i kveld.",
@@ -204,19 +204,19 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Pek på Halvor.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Pekelek: Pek på den som spyr oftest.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på boomeren i rommet.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} peker ut den som får barn først. Vedkommende drikker vekk sorgen med {2-4} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som kommer raskest.",
@@ -224,39 +224,39 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Hvem kommer raskest … til å gjøre noen gravid.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jentene skåler!",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Guttene skåler!",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Lagkonkurranse: {player} og {player}, mot {player} og {player}. Trillebår en runde rundt kollektivet. Vinneren får gi ut 2 shots.", //crazy
-        tagg: ["a","s"]
+        tagg: ["c","a","s"]
     },
     {
         text: "Shot in a box: {player} mot {player}. En person får sprit, den andre vann. Resten peker på den de tror tok shotten. Bommer man er det {4-6} straffeslurker.",
-        tagg: ["a","s"]
+        tagg: ["c","a","s"]
     },
     {
         text: "Alle fra Østlandet drikker {2-4} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} trekker en Sveinung, og drikker antall slurker som på kortet. Bildekort er 10 slurker. {player} bestemmer om A er 1 eller 10.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange øl-merker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.", //kategori
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange bilmerker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.", //kategori
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} nevner så mange land på Z de kan på 20 sekunder. {player} drikker like mange slurker som land nevnt. Hvis man ikke klarer å nevne flere enn 3 land blir dette 5 straffeslurker.",
@@ -264,7 +264,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Alle som bruker briller drikker {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som ikke bruker briller drikker {3-5} smug slurker.",
@@ -272,19 +272,19 @@ const drinkingGameQuestions = [
     },
     {
         text: "Alle som liker katter over hunder drikker {4-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Dem som har vært inne på HalvorHub før drikker {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} drikker en slurk for hvert år han/hun har studert i Trondheim.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som har blitt kastet ut flest ganger fra utesteder.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som har hatt trekant.",
@@ -292,15 +292,15 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Pek på den som har gjort flest crimes.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som blir gravid eller gjør noen gravid først.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som spyr i kveld.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Pek på den som minner deg mest om Magic Mike.",
@@ -308,19 +308,19 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} må fortelle om den verste plassen han/hun har spydd.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har sendt en flørtende melding til feil person tar {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har løyet om sin alder for å komme inn på en bar tar {3-5} slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} må ta 3 slurker for hver 10. armheving {player} klarer",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "Drikk {3-5} hvis du har sovet i sengen/reisesengen til Halvor.",
@@ -328,7 +328,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Den som leser dette spørsmålet drikker 3 slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle som har rotet med vennen/venninnen til {player}.",
@@ -336,7 +336,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Betting: {player} mot {player}: 90-graderen. Alle kan vedde i mot en av spillerene. Vinner spilleren kan vedkommende dele ut like mange slurker som de veddet i mot. Taper man drikker man antallet slurker.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "Vi vet alle at {player} aldri sier nei til et ligg. Pek på den i rommet du synest er mest digg.",
@@ -344,7 +344,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Hva er {6-12}*{6-12}? (drikke antall slurker du bommet med).",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Vi er jævla lei av at {player} og {player} snakker i lag. Hver gang dere prater i lag tar dere {3-6} slurker. (Resten av spillet).",
@@ -352,35 +352,35 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} vs {player}: Kategori bilmerker. Nevn annenhver gang frem til en ikke kommer opp med flere, eller nevner noe som allerede er nevnt.", 
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Hvem her kunne kapret et fly med et uhell?",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} ringer og spør om du kan være med han/hun å gjemme et lik, drikk {3-5}.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "{player} sin x ringer og spør om du er down to fuck, drikk hvis du hadde grepet sjansen.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Pekelek: Hvem har en sexdukke.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Betting: {player} mot {player}. Stirreleken. Alle kan vedde slurker.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "(Ikke les denne høyt): start gris, den siste må drikke 5 slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle drikker likt antall slurker som fiskeburgere de har spist de siste 7 dagene.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Alle i rommet drikker likt antall slurker som styrken på brillene sine.",
@@ -392,11 +392,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} må drikke antall slurker som det er nasjonaliteter i rommet.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "{player} er drikkepartner med {player} resten av spillet.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "De som vett hva en boltekoker er, må drikke.",
@@ -408,35 +408,35 @@ const drinkingGameQuestions = [
     },
     {
         text: "Hver er minst diskre.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: hvem er mest vims.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Hvem er største snaphoe?",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} skål med den som har rarest dialekt.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} mot {player} håndbak, tapperen tar et shot.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "{player} mot {player} race rundt kollektivet, taperen tar et shot.",
-        tagg: ["a","s"]
+        tagg: ["c","a","s"]
     },
     {
         text: "{player} skål med den du ville hatt med deg på en øde øye.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: Drikk antall pek du får.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Pekelek: pek på den du ikke vil ha som forsvarer i en rettsak.",
@@ -448,11 +448,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Hvem kunne {player} nakenbadet med etter et nach?",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "{player}: Høyre eller venstre. Hvem hadde du kysset?",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "{player}, hvem i dette rommet kunne kommet unna med mord?",
@@ -464,7 +464,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg 2 personer å ta {3-5} slurker med.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} drikk så mange slurker som det er folk her.",
@@ -472,27 +472,27 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} vis en syk sexstilling med en valgfri person // crazy.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Alle drikker 5 slurker.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} hvem studerer det mest krevende? Skål for det.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player}, {player}, {player} og {player}. Legg mobilene deres på bordet. Første som får varsel må ta en shot.",
-        tagg: ["a","s"]
+        tagg: ["c","a","s"]
     },
     {
         text: "Sett på «Rattlin' Bog».",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player}, hvem er morsomst?",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player}, hvorfor er du her? Hold en god appell på hvorfor du skal få bli her.",
@@ -512,27 +512,27 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} velg som må være med på shotteski, den du velger må velge neste.",
-        tagg: ["a","s"]
+        tagg: ["c","a","s"]
     },
     {
         text: "Gulvet er lava, sistemann må ta {6-10} slurker.",
-        tagg: ["a"]
+        tagg: ["c","a"]
     },
     {
         text: "Den gjennomsnittlige penisen er 13.12cm (source: Mathiesen), drikk {2-3} hvis du mener du har over gjennomsnittet. Mathiesen måler alle som har drukket.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Den gjennomsnittlige BH-størrelsen i Norge er 85D (source: Mathiesen), drikk viss du har større enn gjennomsnittet.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Den gjennomsnitlige høyden i Norge er 179.75 cm, drikk om du er høyere enn det.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} velg en å ta en shot med.",
-        tagg: ["s"]
+        tagg: ["c","s"]
     },
     {
         text: "{player} bonski med personen tvers over deg.",
@@ -540,15 +540,15 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} si din beste party sang, sett den på!",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player}, er livet ditt bedre enn {player}? Ta {2-4} slurker hvis du mener det.",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Kategori: {player} velg et tema og start.",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "{player} trenger en klem. {player} hjelper med dette. Alle andre skåler for vennskapet.",
@@ -556,15 +556,15 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri hoppet i fallskjerm. 🚁",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri løyet for en politimann. 👮",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri ligget med en kjendis. 🤩",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri hatt en trekant. 🙅",
@@ -572,11 +572,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri snoket i noen andre sine private meldinger. 🤓",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri drukket så mye at jeg besvimte. 🥴",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri spyttet i noen annens drink. 🤢",
@@ -588,7 +588,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri fått en tatovering i beruset tilstand. 🎨",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri hatt sex på en fest. 😉",
@@ -596,7 +596,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri blitt kastet ut av en butikk. 🛑",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri kastet opp på noen. 🤮",
@@ -604,7 +604,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri skadet meg selv mens jeg var full. 😵",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri tatt med meg noe hjem fra en bar. 🍸",
@@ -632,7 +632,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri blitt utestengt fra et nettforum. 💬",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri løyet om min seksuelle erfaring. 🤡",
@@ -640,11 +640,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri skulket skolen. 👨‍🎓",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri vært i en situasjon der jeg trodde jeg skulle dø. 😱",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri hatt sex i en heis. 🚇",
@@ -652,11 +652,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri løyet om inntekten min. 💰",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri stjålet noe fra et hotellrom. 🛎",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri blitt forlatt på en dårlig date. 😥",
@@ -664,19 +664,19 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri prøvd å fake en dialekt. 🤔",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri snoket i partnerens mobiltelefon. 📱",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri blitt dumpet via en tekstmelding. 💔",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri fyllekjørt med sykkel. 🚲",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri kysset noen jeg ikke var tiltrukket av. 😘",
@@ -684,7 +684,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri blitt kastet ut av et casino. 🎰",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri glemt navnet på noen jeg lå med. 🤷",
@@ -692,23 +692,23 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri lurt noen til å tro at jeg kunne et annet språk. 🤔",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri brukt noen andres tannbørste. 🦷",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri prøvd å kaste opp for å føle meg bedre. 🤢",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri blitt tatt på fersken i å snike på offentlig transport. 🚌",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri stjålet noe fra en restaurant. 🍴",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri kysset en eks etter at vi slo opp. 💋",
@@ -720,75 +720,75 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri brukt en falsk ID. 👥",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri mistet mobilen min på en fest. 😕",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri mistet noen på et utested. 😿",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri hatt sex på et sted med risiko for å bli oppdaget. 😉",
-        tagg: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Jeg har aldri blitt kastet ut av et bibliotek. 📓",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri spist mat ut av søpla. 🍎",
-        tagg: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri fått en blackout.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri prøvd å skjule en tatovering.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri prøvd å kjøre bil mens jeg var for full.",
-        tag: ["cp"]
+        tagg: ["cp"]
     },
     {
         text: "Jeg har aldri stjålet noe fra en venns hus.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri prøvd å fake en signatur.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri blitt kastet ut av en taxi.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri hatt sex på en første date.",
-        tag: ["cp"]
+        tagg: ["cp"]
     },
     {
         text: "Jeg har aldri faket en orgasme.",
-        tag: ["cp"]
+        tagg: ["cp"]
     },
     {
         text: "Jeg har aldri blitt tatt i å se på porno.",
-        tag: ["j"]
+        tagg: ["c","j"]
     },
     {
         text: "Jeg har aldri glemt mitt eget telefonnummer.",
-        tag: []
+        tagg: ["c",]
     },
     {
         text: "Jeg har aldri prøvd å stjele en gatestolpe.",
-        tag: ["cp"]
+        tagg: ["cp"]
     },
     {
         text: "Jeg har aldri blitt fanget i å stalke noen på sosiale medier.",
-        tag: ["cp"]
+        tagg: ["cp"]
     }
 ]
 

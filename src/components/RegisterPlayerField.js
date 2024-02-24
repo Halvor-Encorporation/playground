@@ -29,18 +29,19 @@ const RegisterPlayerField = (props) => {
 
     const finalButtonText = buttonText ? buttonText : 'Start Game';
     const finalPlayerLowerLimit = playerLowerLimit ? playerLowerLimit : 3;
-    const localStoredPlayers = JSON.parse(localStorage.getItem('players'));
+    const localStoredPlayers = [""]//JSON.parse(localStorage.getItem('players'));
 
     useEffect(() => {
         // Fetch players from localStorage when component mounts
         console.log(players)
         console.log(localStoredPlayers)
         if (players.length !== 0) return;
-        if (localStoredPlayers.length !== 0) {
-            setPlayers(localStoredPlayers);
+
+        if (localStoredPlayers === undefined || localStoredPlayers.length === 0) {
+            setPlayers(Array(finalPlayerLowerLimit).fill(''));
             return;
         }
-        setPlayers(Array(finalPlayerLowerLimit).fill(''));
+        setPlayers(localStoredPlayers);
 
         
     }, []); // Empty dependency array ensures the effect runs only once when the component mounts

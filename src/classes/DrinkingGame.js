@@ -5,7 +5,7 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
   class DrinkGame {
     constructor(players,level,filters) {
         this.players = this.shuffleArray(players);
-        const filteredQuestions = this.filterQuestions(drinkingGameQuestions,level,filters);
+        const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
         this.questions = this.shuffleArray(filteredQuestions);
         this.player_index = 0;
         this.question_index = 0;
@@ -14,11 +14,42 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
         this.assignPlayersToQuestions();
     }
 
-    filterQuestions = (questions,level,filters) => {
-        const levels = ["c","cp","j"]
-        const dlcs = ["a","s"]
+    filterAllQuestions = (questions,level,filters) => {
+        const levels = {"Crime": "c", "Crime+":"cp","Jail": "j"}
+        const dlcs = {"Activity":"a","Shots":"s"}
+        const includedLevels = Object.values(levels).slice(0, Object.keys(levels).indexOf(level) + 1);
+        let includedDlcs = []
+
+        if (filters.length !== 0) {
+            includedDlcs = filters.map(filter => dlcs[filter])
+        }
+        const dlcValue = Object.values(dlcs);
+        const notIncludedDlcs = dlcValue.filter(level => !includedDlcs.includes(level));
+
+        questions = this.filterDlcs(questions,notIncludedDlcs);
+        questions = this.getQuestionsLevel(questions,includedLevels);
+        console.log(questions)
+        console.log(includedLevels)
         //TODO: filter questions based on level and filters
         return questions.map(question => question.text);
+    }
+
+    filterDlcs = (questions,dlcs) => {
+        dlcs.forEach(dlc => {
+            questions = questions.filter(question => {
+                return !question.tagg.includes(dlc);
+            })
+    });
+        return questions;
+    }
+
+    getQuestionsLevel = (questions, levels) => {
+        questions = questions.filter(question => {
+            return levels.some(level => {
+                return question.tagg.includes(level)
+            });
+        });
+        return questions;
     }
 
 
