@@ -180,7 +180,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player}, {player}, {player} og {player} må ta en shotteski.",
-        tagg: ["c","s","a","j"]
+        tagg: ["s","a","j"]
     },
     {
         text: "{player} tar en slurk for hver bioperson i rommet. Hvis det er ingen må du ta 5 slurker.",
@@ -204,7 +204,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Pek på Halvor.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Pekelek: Pek på den som spyr oftest.",
@@ -360,15 +360,15 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} ringer og spør om du kan være med han/hun å gjemme et lik, drikk {3-5}.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "{player} sin x ringer og spør om du er down to fuck, drikk hvis du hadde grepet sjansen.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Pekelek: Hvem har en sexdukke.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Betting: {player} mot {player}. Stirreleken. Alle kan vedde slurker.",
@@ -392,7 +392,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} må drikke antall slurker som det er nasjonaliteter i rommet.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "{player} er drikkepartner med {player} resten av spillet.",
@@ -448,11 +448,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Pekelek: Hvem kunne {player} nakenbadet med etter et nach?",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "{player}: Høyre eller venstre. Hvem hadde du kysset?",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "{player}, hvem i dette rommet kunne kommet unna med mord?",
@@ -472,7 +472,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} vis en syk sexstilling med en valgfri person // crazy.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Alle drikker 5 slurker.",
@@ -520,11 +520,11 @@ const drinkingGameQuestions = [
     },
     {
         text: "Den gjennomsnittlige penisen er 13.12cm (source: Mathiesen), drikk {2-3} hvis du mener du har over gjennomsnittet. Mathiesen måler alle som har drukket.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Den gjennomsnittlige BH-størrelsen i Norge er 85D (source: Mathiesen), drikk viss du har større enn gjennomsnittet.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Den gjennomsnitlige høyden i Norge er 179.75 cm, drikk om du er høyere enn det.",
@@ -544,7 +544,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player}, er livet ditt bedre enn {player}? Ta {2-4} slurker hvis du mener det.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Kategori: {player} velg et tema og start.",
@@ -732,7 +732,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri hatt sex på et sted med risiko for å bli oppdaget. 😉",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Jeg har aldri blitt kastet ut av et bibliotek. 📓",
@@ -776,7 +776,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "Jeg har aldri blitt tatt i å se på porno.",
-        tagg: ["c","j"]
+        tagg: ["j"]
     },
     {
         text: "Jeg har aldri glemt mitt eget telefonnummer.",
