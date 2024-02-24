@@ -17,9 +17,14 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
     filterAllQuestions = (questions,level,filters) => {
         const levels = {"Crime": "c", "Crime+":"cp","Jail": "j"}
         const dlcs = {"Activity":"a","Shots":"s"}
-        const includedLevels = Object.values(levels).slice(0, Object.keys(levels).indexOf(level) + 1);
+        //const includedLevels = Object.values(levels).slice(0, Object.keys(levels).indexOf(level) + 1);
+        let includedLevels = ["c"]
+        const levelShort = levels[level]
         let includedDlcs = []
-
+        if (levelShort === "cp")
+            includedLevels = ["c","cp"]
+        if (levelShort === "j")
+            includedLevels = ["cp","j"]
         if (filters.length !== 0) {
             includedDlcs = filters.map(filter => dlcs[filter])
         }
