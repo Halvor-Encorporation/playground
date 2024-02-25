@@ -127,11 +127,11 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "{player} nevner så mange øl-merker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.", //kategori
+        text: "{player} nevner så mange øl-merker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.", 
         tagg: ["c",]
     },
     {
-        text: "{player} nevner så mange bilmerker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.", //kategori
+        text: "{player} nevner så mange bilmerker de kan på 20 sekunder. {player} drikker like mange slurker som merker nevnt.",
         tagg: ["c",]
     },
     {
@@ -300,7 +300,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player} mot {player} håndbak, tapperen tar et shot.",
-        tagg: ["c","a"]
+        tagg: ["c","a", "s"]
     },
     {
         text: "{player} mot {player} race rundt kollektivet, taperen tar et shot.",
@@ -347,7 +347,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "{player} vis en syk sexstilling med en valgfri person // crazy.",
+        text: "{player} vis en syk sexstilling med en valgfri person.",
         tagg: ["j"]
     },
     {
@@ -387,7 +387,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "{player} velg som må være med på shotteski, den du velger må velge neste.",
+        text: "{player} velger en som må være med på shotteski, den du velger må velge nestemann, osv.",
         tagg: ["cp","a","s"]
     },
     {
@@ -672,7 +672,7 @@ const drinkingGameQuestions = [
     },
     {
         text: "{player}, ta en bodyshot fra valgfri person.",
-        tagg: ["j"]
+        tagg: ["j", "s"]
     },
     {
         text: "Jeg har aldri pult noen jeg ikke husker navnet til.",
@@ -715,7 +715,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Ok, red flag eller dealbreaker. Partneren din din får regelmessig middagsbesøk av {player}.",
+        text: "Ok, red flag eller dealbreaker. Partneren din får regelmessig middagsbesøk av {player}.",
         tagg: ["cp"]
     },
     {
