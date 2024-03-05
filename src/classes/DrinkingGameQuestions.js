@@ -11,7 +11,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "{player} skaler med de som har laget spillet.",
+        text: "{player} skåler med dem som har laget spillet.",
         tagg: ["c",]
     },
     {
@@ -35,8 +35,8 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Adrian skåler med den fineste personen fra Sør-Norge.",
-        tagg: ["cp"]
+        text: "Waterfall: {player} starter å drikke. Hvis personen til høyre for deg er ferdig, kan du stoppe.",
+        tagg: ["cp","a"]
     },
     {
         text: "Edvard skåler med den fineste personen fra Nord-Norge.",
@@ -79,8 +79,8 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Pekelek: Pek på Halvor.",
-        tagg: ["j"]
+        text: "Pekelek: Pek på {player}.",
+        tagg: ["c"]
     },
     {
         text: "Pekelek: Pek på den som spyr oftest.",
@@ -143,7 +143,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Alle som ikke bruker briller drikker {3-5} smug slurker.",
+        text: "Alle som ikke bruker briller drikker {3-5} arrogante slurker.",
         tagg: ["cp"]
     },
     {
@@ -151,7 +151,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Dem som har vært inne på HalvorHub før drikker {3-5} slurker.",
+        text: "De som har vært inne på HalvorHub før drikker {3-5} slurker.",
         tagg: ["c",]
     },
     {
@@ -307,7 +307,7 @@ const drinkingGameQuestions = [
         tagg: ["cp","a","s"]
     },
     {
-        text: "{player} skål med den du ville hatt med deg på en øde øye.",
+        text: "{player} skål med den du ville tatt med deg på en øde øy.",
         tagg: ["c",]
     },
     {
@@ -317,6 +317,10 @@ const drinkingGameQuestions = [
     {
         text: "Pekelek: pek på den du ikke vil ha som forsvarer i en rettsak.",
         tagg: ["cp"]
+    },
+    {
+        text: "Pekelek: pek på den du ikke ville hatt med i forsvaret.",
+        tagg: ["c"]
     },
     {
         text: "Pekelek: pek på den du ikke vil ha som tannlege.",
@@ -331,7 +335,7 @@ const drinkingGameQuestions = [
         tagg: ["j"]
     },
     {
-        text: "{player}, hvem i dette rommet kunne kommet unna med mord?",
+        text: "{player}, skål med den i rommet som kunne kommet unna med mord.",
         tagg: ["cp"]
     },
     {
@@ -379,7 +383,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "{player}, dersom du har vært på rommet til Halvor ta {3-5} slurker.",
+        text: "{player}, dersom du har vært på rommet til {player}, ta {3-5} slurker.",
         tagg: ["cp"]
     },
     {
@@ -387,7 +391,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "{player} velger en som må være med på shotteski, den du velger må velge nestemann, osv.",
+        text: "{player} velger en som må være med på shotteski. Den du velger må velge neste person, osv...",
         tagg: ["cp","a","s"]
     },
     {
@@ -399,23 +403,23 @@ const drinkingGameQuestions = [
         tagg: ["j"]
     },
     {
-        text: "Den gjennomsnittlige BH-størrelsen i Norge er 85D (source: Mathiesen), drikk viss du har større enn gjennomsnittet.",
+        text: "Den gjennomsnittlige BH-størrelsen i Norge er 85C (source: Mathiesen), drikk viss du har større enn gjennomsnittet.",
         tagg: ["j"]
     },
     {
-        text: "Den gjennomsnitlige høyden i Norge er 179.75 cm, drikk om du er høyere enn det.",
+        text: "Den gjennomsnitlige høyden i Norge er 179.75 cm, drikk {2-4} slurker om du er høyere.",
         tagg: ["c",]
     },
     {
-        text: "{player} velg en å ta en shot med.",
+        text: "{player}, velg en å ta en shot med.",
         tagg: ["cp","s"]
     },
     {
-        text: "{player} bonski med personen tvers over deg.",
+        text: "{player}, bonski med personen tvers over deg.",
         tagg: ["cp"]
     },
     {
-        text: "{player} si din beste party sang, sett den på!",
+        text: "{player}, si din beste party sang, sett den på!",
         tagg: ["c",]
     },
     {
@@ -523,7 +527,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri hatt sex i en heis. 🚇",
+        text: "Jeg har aldri hatt sex i en heis. 🚇", //devs: lag logikk at neste spørsmål er: hvis du kommenterte på toget må du ta 5 slurker elle noe
         tagg: ["cp"]
     },
     {
@@ -583,15 +587,11 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri stjålet noe fra en restaurant. 🍴",
+        text: "Jeg har aldri stjålet et glass fra et utested.",
         tagg: ["c",]
     },
     {
         text: "Jeg har aldri kysset en eks etter at vi slo opp. 💋",
-        tagg: ["cp"]
-    },
-    {
-        text: "Jeg har aldri blitt oppdaget naken. 😅",
         tagg: ["cp"]
     },
     {
@@ -627,7 +627,7 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri prøvd å kjøre bil mens jeg var for full.",
+        text: "Jeg har aldri prøvd å kjøre bil i beruset tilstand.",
         tagg: ["cp"]
     },
     {
@@ -647,7 +647,7 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri faket en orgasme.",
+        text: "Jeg har aldri faket en orgasme. {4-7} slurker ekstra om man er gutt.",
         tagg: ["cp"]
     },
     {
@@ -659,11 +659,11 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri prøvd å stjele en gatestolpe.",
+        text: "Jeg har aldri stjålet et trafikkskilt.",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt fanget i å stalke noen på sosiale medier.",
+        text: "Jeg har aldri blitt fersket i å stalke noen på sosiale medier.",
         tagg: ["cp"]
     },
     {
