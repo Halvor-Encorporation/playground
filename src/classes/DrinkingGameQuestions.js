@@ -435,155 +435,155 @@ const drinkingGameQuestions = [
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri hoppet i fallskjerm. 🚁",
+        text: "Jeg har aldri hoppet i fallskjerm 🚁",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri løyet for en politimann. 👮",
+        text: "Jeg har aldri løyet for en politimann 👮",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri ligget med en kjendis. 🤩",
+        text: "Jeg har aldri ligget med en kjendis 🤩",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri hatt en trekant. 🙅",
+        text: "Jeg har aldri hatt en trekant 🙅",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri snoket i noen andre sine private meldinger. 🤓",
+        text: "Jeg har aldri snoket i noen andre sine private meldinger 🤓",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri drukket så mye at jeg besvimte. 🥴",
+        text: "Jeg har aldri drukket så mye at jeg besvimte 🥴",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri spyttet i noen annens drink. 🤢",
+        text: "Jeg har aldri spyttet i noen annens drink 🤢",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri tatt på meg noens undertøy uten at de visste om det. 😇",
+        text: "Jeg har aldri tatt på meg noens undertøy uten at de visste om det 😇",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri fått en tatovering i beruset tilstand. 🎨",
+        text: "Jeg har aldri fått en tatovering i beruset tilstand 🎨",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri hatt sex på en fest. 😉",
+        text: "Jeg har aldri hatt sex på en fest 😉",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt kastet ut av en butikk. 🛑",
+        text: "Jeg har aldri blitt kastet ut av en butikk 🛑",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri kastet opp på noen. 🤮",
+        text: "Jeg har aldri kastet opp på noen 🤮",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri skadet meg selv mens jeg var full. 😵",
+        text: "Jeg har aldri skadet meg selv mens jeg var full 😵",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri tatt med meg noe hjem fra en bar. 🍸",
+        text: "Jeg har aldri tatt med meg noe hjem fra en bar 🍸",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri kysset noen jeg bare hadde kjent i noen timer. 😗",
+        text: "Jeg har aldri kysset noen jeg bare hadde kjent i noen timer 😗",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt tatt på fersken i å sjekke noen opp. 🤫",
+        text: "Jeg har aldri blitt tatt på fersken i å sjekke noen opp 🤫",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri stjålet en venns partner. 🤬",
+        text: "Jeg har aldri stjålet en venns partner 🤬",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt kastet ut av et hotell. 🏨",
+        text: "Jeg har aldri blitt kastet ut av et hotell 🏨",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri hatt sex på et fly. ✈️",
+        text: "Jeg har aldri hatt sex på et fly ✈️",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt utestengt fra et nettforum. 💬",
+        text: "Jeg har aldri blitt utestengt fra et nettforum 💬",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri løyet om min seksuelle erfaring. 🤡",
+        text: "Jeg har aldri løyet om min seksuelle erfaring 🤡",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri skulket skolen. 👨‍🎓",
+        text: "Jeg har aldri skulket skolen 👨‍🎓",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri vært i en situasjon der jeg trodde jeg skulle dø. 😱",
+        text: "Jeg har aldri vært i en situasjon der jeg trodde jeg skulle dø 😱",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri hatt sex i en heis. 🚇", //devs: lag logikk at neste spørsmål er: hvis du kommenterte på toget må du ta 5 slurker elle noe
+        text: "Jeg har aldri hatt sex i en heis 🚇", //devs: lag logikk at neste spørsmål er: hvis du kommenterte på toget må du ta 5 slurker elle noe
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri løyet om inntekten min. 💰",
+        text: "Jeg har aldri løyet om inntekten min 💰",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri stjålet noe fra et hotellrom. 🛎",
+        text: "Jeg har aldri stjålet noe fra et hotellrom 🛎",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri blitt forlatt på en dårlig date. 😥",
+        text: "Jeg har aldri blitt forlatt på en dårlig date 😥",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri prøvd å fake en dialekt. 🤔",
+        text: "Jeg har aldri prøvd å fake en dialekt 🤔",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri snoket i partnerens mobiltelefon. 📱",
+        text: "Jeg har aldri snoket i partnerens mobiltelefon 📱",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri blitt dumpet via en tekstmelding. 💔",
+        text: "Jeg har aldri blitt dumpet via en tekstmelding 💔",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri fyllekjørt med sykkel. 🚲",
+        text: "Jeg har aldri fyllekjørt med sykkel 🚲",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri kysset noen jeg ikke var tiltrukket av. 😘",
+        text: "Jeg har aldri kysset noen jeg ikke var tiltrukket av 😘",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri blitt kastet ut av et casino. 🎰",
+        text: "Jeg har aldri blitt kastet ut av et casino 🎰",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri glemt navnet på noen jeg lå med. 🤷",
+        text: "Jeg har aldri glemt navnet på noen jeg lå med 🤷",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri lurt noen til å tro at jeg kunne et annet språk. 🤔",
+        text: "Jeg har aldri lurt noen til å tro at jeg kunne et annet språk 🤔",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri brukt noen andres tannbørste. 🦷",
+        text: "Jeg har aldri brukt noen andres tannbørste 🦷",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri prøvd å kaste opp for å føle meg bedre. 🤢",
+        text: "Jeg har aldri prøvd å kaste opp for å føle meg bedre 🤢",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri blitt tatt på fersken i å snike på offentlig transport. 🚌",
+        text: "Jeg har aldri blitt tatt på fersken i å snike på offentlig transport 🚌",
         tagg: ["c",]
     },
     {
@@ -591,31 +591,31 @@ const drinkingGameQuestions = [
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri kysset en eks etter at vi slo opp. 💋",
+        text: "Jeg har aldri kysset en eks etter at vi slo opp 💋",
         tagg: ["cp"]
     },
     {
-        text: "Jeg har aldri brukt en falsk ID. 👥",
+        text: "Jeg har aldri brukt en falsk ID 👥",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri mistet mobilen min på en fest. 😕",
+        text: "Jeg har aldri mistet mobilen min på en fest 😕",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri mistet noen på et utested. 😿",
+        text: "Jeg har aldri mistet noen på et utested 😿",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri hatt sex på et sted med risiko for å bli oppdaget. 😉",
+        text: "Jeg har aldri hatt sex på et sted med risiko for å bli oppdaget 😉",
         tagg: ["j"]
     },
     {
-        text: "Jeg har aldri blitt kastet ut av et bibliotek. 📓",
+        text: "Jeg har aldri blitt kastet ut av et bibliotek 📓",
         tagg: ["c",]
     },
     {
-        text: "Jeg har aldri spist mat ut av søpla. 🍎",
+        text: "Jeg har aldri spist mat ut av søpla 🍎",
         tagg: ["c",]
     },
     {
