@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 import Button from '@mui/material/Button';
 import AddCircleOutline from '@mui/icons-material/AddCircleOutline';
-import { useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 const RegisterPlayerField = (props) => {
     /**
@@ -30,6 +30,8 @@ const RegisterPlayerField = (props) => {
     const finalButtonText = buttonText ? buttonText : 'Start Game';
     const finalPlayerLowerLimit = playerLowerLimit ? playerLowerLimit : 3;
     const localStoredPlayers = [""]//JSON.parse(localStorage.getItem('players'));
+
+    const inputRefs = useRef([]);
 
     useEffect(() => {
         // Fetch players from localStorage when component mounts
@@ -57,6 +59,12 @@ const RegisterPlayerField = (props) => {
     function addPlayer() {
         const newPlayers = [...players, ''];
         setPlayers(newPlayers);
+        
+        setTimeout(() => {
+            if (inputRefs.current[newPlayers.length - 1]) {
+                inputRefs.current[newPlayers.length - 1].focus();
+            }
+        }, 100);
     }
 
     function deletePlayer(index) {
@@ -80,6 +88,21 @@ const RegisterPlayerField = (props) => {
         startGame();
     }
 
+    function handleKeyPress(e, index) {
+        if (e.key === 'Enter') {
+            if (index === players.length - 1) {
+                // Add new player if it's the last input field
+                addPlayer();
+            } else {
+                // Move to the next input field
+                if (inputRefs.current[index + 1]) {
+                    inputRefs.current[index + 1].focus();
+                }
+            }
+            e.preventDefault(); // Prevent the default action
+        }
+    }
+
     return (
         <div {...otherProps}>
             <div className="inputFieldContainer">
@@ -91,6 +114,9 @@ const RegisterPlayerField = (props) => {
                             className="inputField"
                             value={player}
                             onChange={(e) => handlePlayerChange(index, e.target.value)}
+                            onKeyPress={(e) => handleKeyPress(e, index)}
+                            // Assign a ref to each input field
+                            inputRef={el => inputRefs.current[index] = el}
                         />
                         <IconButton
                             size="large"
