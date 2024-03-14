@@ -2,16 +2,26 @@
 import drinkingGameQuestions from './DrinkingGameQuestions.js';
 
 
-  class DrinkGame {
-    constructor(players,level,filters) {
+  class DrinkingGame {
+    constructor(players,level,filters, questions, player_index, question_index, playerAssignments, selectedNumbers) {
         this.players = this.shuffleArray(players);
-        const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
-        this.questions = this.shuffleArray(filteredQuestions);
-        this.player_index = 0;
-        this.question_index = 0;
-        this.playerAssignments = [];
-        this.selectedNumbers = {};
-        this.assignPlayersToQuestions();
+        this.level = level;
+        this.filters = filters;
+        if (arguments.length > 3) {
+            this.questions = questions;
+            this.player_index = player_index;
+            this.question_index = question_index;
+            this.playerAssignments = playerAssignments;
+            this.selectedNumbers = selectedNumbers;
+        } else {
+            const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
+            this.questions = this.shuffleArray(filteredQuestions);
+            this.player_index = 0;
+            this.question_index = 0;
+            this.playerAssignments = [];
+            this.selectedNumbers = {};
+            this.assignPlayersToQuestions();
+        }
     }
 
     filterAllQuestions = (questions,level,filters) => {
@@ -174,15 +184,27 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
         return {
           players: this.players,
           questionIndex: this.question_index,
+          level: this.level,
+          filters: this.filters,
+          questions: this.questions,
+          playerIndex: this.player_index,
+          playerAssignments: this.playerAssignments,
+          selectedNumbers: this.selectedNumbers
         };
       }
     
       loadState(state) {
         this.players = state.players;
         this.question_index = state.questionIndex;
+        this.level = state.level;
+        this.filters = state.filters;
+        this.questions = state.questions;
+        this.player_index = state.playerIndex;
+        this.playerAssignments = state.playerAssignments;
+        this.selectedNumbers = state.selectedNumbers;
       }
     
 }
 
     
-export default DrinkGame;
+export default DrinkingGame;

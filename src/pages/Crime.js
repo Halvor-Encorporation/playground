@@ -20,7 +20,16 @@ const Crime = () => {
   useEffect(() => {
     const savedGame = JSON.parse(localStorage.getItem('game'));
     if (savedGame) {
-      const loadedGame = new DrinkingGame(savedGame.players);
+      const loadedGame = new DrinkingGame(
+        savedGame.players,
+        savedGame.level, 
+        savedGame.filters,
+        savedGame.questions,
+        savedGame.playerIndex,
+        savedGame.questionIndex,
+        savedGame.playerAssignments,
+        savedGame.selectedNumbers    
+        );
       loadedGame.loadState(savedGame); // You need to implement loadState method in DrinkingGame class
       setGame(loadedGame);
     }
@@ -30,6 +39,7 @@ const Crime = () => {
     localStorage.setItem('gameStarted', JSON.stringify(gameStarted));
     localStorage.setItem('gameState', JSON.stringify(gameState));
     if (game) {
+      console.log(game);
       localStorage.setItem('game', JSON.stringify(game.saveState())); // You need to implement saveState method in DrinkingGame class
     }
   }, [gameStarted, gameState, game]);
