@@ -4,16 +4,17 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
 
   class DrinkingGame {
     constructor(players,level,filters, questions, player_index, question_index, playerAssignments, selectedNumbers) {
-        this.players = this.shuffleArray(players);
         this.level = level;
         this.filters = filters;
-        if (arguments.length > 3) {
+        if (arguments.length > 2) {
+            this.players = players;
             this.questions = questions;
             this.player_index = player_index;
             this.question_index = question_index;
             this.playerAssignments = playerAssignments;
             this.selectedNumbers = selectedNumbers;
         } else {
+            this.players = this.shuffleArray(players);
             const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
             this.questions = this.shuffleArray(filteredQuestions);
             this.player_index = 0;
@@ -43,8 +44,6 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
 
         questions = this.filterDlcs(questions,notIncludedDlcs);
         questions = this.getQuestionsLevel(questions,includedLevels);
-        console.log(questions)
-        console.log(includedLevels)
         //TODO: filter questions based on level and filters
         return questions.map(question => question.text);
     }
@@ -160,9 +159,7 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
     }
 
     previousQuestion() {
-        console.log(this.question_index);
         if (this.question_index > 0) {
-            console.log(this.question_index);
             this.question_index--;
         }
 
