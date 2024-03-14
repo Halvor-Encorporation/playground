@@ -6,7 +6,7 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
     constructor(players,level,filters, questions, player_index, question_index, playerAssignments, selectedNumbers) {
         this.level = level;
         this.filters = filters;
-        if (arguments.length > 2) {
+        if (arguments.length > 3) {
             this.players = players;
             this.questions = questions;
             this.player_index = player_index;
