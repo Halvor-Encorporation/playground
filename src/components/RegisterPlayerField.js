@@ -75,7 +75,7 @@ const RegisterPlayerField = (props) => {
 
     function handlePlayerChange(index, value) {
         const newPlayers = [...players];
-        newPlayers[index] = value;
+        newPlayers[index] = value.trim();
         setPlayers(newPlayers);
     }
 
@@ -85,6 +85,7 @@ const RegisterPlayerField = (props) => {
             alert(`You need at least ${finalPlayerLowerLimit} players to start the game`);
             return;
         }
+        setPlayers(filteredPlayers);
         startGame();
     }
 
