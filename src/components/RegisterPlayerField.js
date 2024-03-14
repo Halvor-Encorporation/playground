@@ -34,19 +34,14 @@ const RegisterPlayerField = (props) => {
     const inputRefs = useRef([]);
 
     useEffect(() => {
-        // Fetch players from localStorage when component mounts
-        //console.log(players)
-        //console.log(localStoredPlayers)
-        if (players.length !== 0) return;
-
-        if (localStoredPlayers === undefined || localStoredPlayers.length === 0) {
-            setPlayers(Array(finalPlayerLowerLimit).fill(''));
-            return;
+        // Load players from localStorage when component mounts
+        const storedPlayers = JSON.parse(localStorage.getItem('players')) || [];
+        if (storedPlayers.length > 0) {
+            setPlayers(storedPlayers);
+        } else {
+            setPlayers(Array(playerLowerLimit).fill(''));
         }
-        setPlayers(localStoredPlayers);
-
-        
-    }, []); // Empty dependency array ensures the effect runs only once when the component mounts
+    }, [setPlayers, playerLowerLimit]);
 
     useEffect(() => {
         if (players.length !== 0) { //In case this is runned before the players are set
