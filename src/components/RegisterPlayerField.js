@@ -29,17 +29,20 @@ const RegisterPlayerField = (props) => {
 
     const finalButtonText = buttonText ? buttonText : 'Start Game';
     const finalPlayerLowerLimit = playerLowerLimit ? playerLowerLimit : 3;
-    const localStoredPlayers = [""]//JSON.parse(localStorage.getItem('players'));
+    const localStoredPlayers = JSON.parse(localStorage.getItem('players')) || [];
 
     const inputRefs = useRef([]);
 
     useEffect(() => {
         // Load players from localStorage when component mounts
-        const storedPlayers = JSON.parse(localStorage.getItem('players')) || [];
-        if (storedPlayers.length > 0) {
-            setPlayers(storedPlayers);
-        } else {
+        if (localStoredPlayers.length === 0) {
             setPlayers(Array(playerLowerLimit).fill(''));
+        } else if (localStoredPlayers.length < 4) {
+            const newPlayers = localStoredPlayers.concat(Array(4 - localStoredPlayers.length).fill(''));
+            setPlayers(newPlayers);
+        }
+        else {
+            setPlayers(localStoredPlayers);
         }
     }, [setPlayers, playerLowerLimit]);
 
