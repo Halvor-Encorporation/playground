@@ -1,9 +1,14 @@
 // In SelectionMenu.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ButtonGroup, Button, FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
 
-const SelectionMenu = ({ exclusiveSelected, setExclusiveSelected, multipleSelected, setMultipleSelected }) => {
+const SelectionMenu = ({ setExclusiveSelected, setMultipleSelected }) => {
+    
+    const [exclusiveSelected, setLocalExclusiveSelected] = useState(localStorage.getItem('exclusiveSelected') || 'Crime');
+    const [multipleSelected, setLocalMultipleSelected] = useState(JSON.parse(localStorage.getItem('multipleSelected')) || []);
+    
     const handleExclusiveChange = (value) => {
+        setLocalExclusiveSelected(value);
         setExclusiveSelected(value);
     };
 
@@ -12,8 +17,18 @@ const SelectionMenu = ({ exclusiveSelected, setExclusiveSelected, multipleSelect
         const newSelection = multipleSelected.includes(value)
             ? multipleSelected.filter((option) => option !== value)
             : [...multipleSelected, value];
+
+        setLocalMultipleSelected(newSelection);
         setMultipleSelected(newSelection);
     };
+
+    useEffect(() => {
+        localStorage.setItem('exclusiveSelected', exclusiveSelected);
+    }, [exclusiveSelected]);
+
+    useEffect(() => {
+        localStorage.setItem('multipleSelected', JSON.stringify(multipleSelected));
+    }, [multipleSelected]);
 
     // Ensure data is defined before rendering
     if (!exclusiveSelected || !multipleSelected) {
