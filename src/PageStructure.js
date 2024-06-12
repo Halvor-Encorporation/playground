@@ -16,7 +16,7 @@ const pageStructure = {
       title: "Kurs",
       pages: [
         {"title": "Dragekurs", "path": coursesPageUrl + "drage"},
-        {"title": "Surfkurs", "path": coursesPageUrl + "surf"},
+        {"title": "Surfekurs", "path": coursesPageUrl + "surf"},
         {"title": "Fektekurs", "path": coursesPageUrl + "fekte"},
       ]
     }
