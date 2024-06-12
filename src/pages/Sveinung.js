@@ -7,10 +7,11 @@ import '../App.css';
 const SveinungGameRules = () => {
   // Define the game rules
   const rules = [
-    "Del ut et kort til hver person.",
-    "Hver person ser på sitt kort.",
-    "Start med en tilfeldig spiller. Denne kan velge å beholde kortet ('pass') eller bytte det med en annen spiller uten å se kortene. Bytte eller pass skjer før turen går videre med klokken.",
-    "Når alle har passet eller byttet, viser alle kortene. Den med lavest verdi drikker slurker lik kortets tall (bildekort = 10 slurker, ess = 1 slurk). Ved lik lavest verdi mellom to eller flere spillere, drikkes dobbelt så mange slurker."
+    "Del ut et kort til hver spiller (med sveinung-siden ned).",
+    "Hver spiller ser på sitt kort og legger tilbake kortet på plassen sin slik at ingen kan se tallverdien.",
+    "Start med en tilfeldig spiller. Denne kan velge å beholde kortet (\"pass\") eller bytte det med en annen spiller uten å se kortene (\"swappy\"). \"Swappy\" eller pass skjer på rundgang med klokken.",
+    "Når alle har passet eller tatt en \"swappy\", viser alle kortene sine. Den med lavest verdi drikker slurker lik kortets tall (bildekort = 10 slurker, ess = 1 slurk). Hvis to eller flere spillere har lik lavest verdi, drikkes dobbelt så mange slurker som normalt.",
+    "Runden er over. Gå tilbake til punkt 1. og begynn runden med neste spiller i rekken."
   ];
 
   const getBackgroundColor = (index) => {
