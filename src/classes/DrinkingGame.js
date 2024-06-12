@@ -2,16 +2,27 @@
 import drinkingGameQuestions from './DrinkingGameQuestions.js';
 
 
-  class DrinkGame {
-    constructor(players,level,filters) {
-        this.players = this.shuffleArray(players);
-        const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
-        this.questions = this.shuffleArray(filteredQuestions);
-        this.player_index = 0;
-        this.question_index = 0;
-        this.playerAssignments = [];
-        this.selectedNumbers = {};
-        this.assignPlayersToQuestions();
+  class DrinkingGame {
+    constructor(players,level,filters, questions, player_index, question_index, playerAssignments, selectedNumbers) {
+        this.level = level;
+        this.filters = filters;
+        if (arguments.length > 3) {
+            this.players = players;
+            this.questions = questions;
+            this.player_index = player_index;
+            this.question_index = question_index;
+            this.playerAssignments = playerAssignments;
+            this.selectedNumbers = selectedNumbers;
+        } else {
+            this.players = this.shuffleArray(players);
+            const filteredQuestions = this.filterAllQuestions(drinkingGameQuestions,level,filters);
+            this.questions = this.shuffleArray(filteredQuestions);
+            this.player_index = 0;
+            this.question_index = 0;
+            this.playerAssignments = [];
+            this.selectedNumbers = {};
+            this.assignPlayersToQuestions();
+        }
     }
 
     filterAllQuestions = (questions,level,filters) => {
@@ -33,8 +44,6 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
 
         questions = this.filterDlcs(questions,notIncludedDlcs);
         questions = this.getQuestionsLevel(questions,includedLevels);
-        console.log(questions)
-        console.log(includedLevels)
         //TODO: filter questions based on level and filters
         return questions.map(question => question.text);
     }
@@ -150,9 +159,7 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
     }
 
     previousQuestion() {
-        console.log(this.question_index);
         if (this.question_index > 0) {
-            console.log(this.question_index);
             this.question_index--;
         }
 
@@ -174,15 +181,27 @@ import drinkingGameQuestions from './DrinkingGameQuestions.js';
         return {
           players: this.players,
           questionIndex: this.question_index,
+          level: this.level,
+          filters: this.filters,
+          questions: this.questions,
+          playerIndex: this.player_index,
+          playerAssignments: this.playerAssignments,
+          selectedNumbers: this.selectedNumbers
         };
       }
     
       loadState(state) {
         this.players = state.players;
         this.question_index = state.questionIndex;
+        this.level = state.level;
+        this.filters = state.filters;
+        this.questions = state.questions;
+        this.player_index = state.playerIndex;
+        this.playerAssignments = state.playerAssignments;
+        this.selectedNumbers = state.selectedNumbers;
       }
     
 }
 
     
-export default DrinkGame;
+export default DrinkingGame;
