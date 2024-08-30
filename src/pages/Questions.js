@@ -39,7 +39,7 @@
 
         return (
             <div style={getContainerStyle()}>
-                <h1>Velkommen! Skål alle sammen!</h1>
+                <h1>Velkommen! Skål alle sammen og Petter!</h1>
                 {randomQuestions.map((question, index) => {
                     // Check to display the SKÅL message after every 10 questions, starting with the 10th question
                     const isSkalPoint = (index + 1) % 10 === 0 && index !== 99; // Exclude the 100th question
@@ -63,7 +63,7 @@
                         <h2 style={{ color: 'rgba(0, 0, 0, 0.7)' }}>100 SPØRSMÅL! SKÅL!😎🍻</h2>
                     </div>
                 )}
-                <h2>Game over. Chug drinken din!</h2>
+                <h2>Game over. Chug 2 drinken din!</h2>
                 <p>Dette gjelder spilleren som holder kasteobjektet</p>
                 <button style={{ fontSize: '20px', padding: '10px 20px', marginBottom: '20px' }} onClick={goBackHome}>Gå tilbake</button> {/* Adjusted button size and added margin */}
             </div>
