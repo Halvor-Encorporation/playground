@@ -14,7 +14,7 @@ const MainPage = () => {
   return (
     <>
       <div className="App-body">
-        <h1>HalvorHub</h1>
+        <h1>HalvorHub Intern Site</h1>
           <img src={halvorImage} className="App-logo" alt="Halvor" /> {/* Add this line */}
       </div>
     </>
